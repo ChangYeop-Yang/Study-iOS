@@ -108,8 +108,13 @@ Lets you know that your app is being terminated. This method is not called if yo
 * **viewDidDisappear**</br>
 **Called just after the view controller’s content view has been removed from the app’s view hierarchy.** Use this method to perform additional teardown activities. Despite the name, the system does not call this method just because the content view has become hidden or obscured. This method is only called when the content view has been removed from the app’s view hierarchy.
 
+* **viewDidLayoutSubviews**</br>
+**Called to notify the view controller that its view has just laid out its subviews.** When the bounds change for a view controller's view, the view adjusts the positions of its subviews and then the system calls this method. However, this method being called does not indicate that the individual layouts of the view's subviews have been adjusted. Each subview is responsible for adjusting its own layout.
+</br></br>Your view controller can override this method to make changes after the view lays out its subviews. The default implementation of this method does nothing.
+
 ## ★ REFERENCE
 * [The iOS Application Lifecycle](https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle)
 * [Managing Your App's Life Cycle - Apple](https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle)
 * [The App Life Cycle - App Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW1)
 * [Work with View Controllers - App Programming Guide for iOS](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/WorkWithViewControllers.html)
+* [viewDidLayoutSubviews - App Programming Guide for iOS](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621398-viewdidlayoutsubviews)
