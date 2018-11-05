@@ -122,6 +122,11 @@ Lets you know that your app is being terminated. This method is not called if yo
 **Called to notify the view controller that its view has just laid out its subviews.** When the bounds change for a view controller's view, the view adjusts the positions of its subviews and then the system calls this method. However, this method being called does not indicate that the individual layouts of the view's subviews have been adjusted. Each subview is responsible for adjusting its own layout.
 </br></br>Your view controller can override this method to make changes after the view lays out its subviews. The default implementation of this method does nothing.
 
+* * *
+
+* **viewWillLayoutSubviews**</br>
+Called to notify the view controller that its view is about to layout its subviews. When a view's bounds change, the view adjusts the position of its subviews. Your view controller can override this method to make changes before the view lays out its subviews. The default implementation of this method does nothing.
+
 ## ★ REFERENCE
 * [The iOS Application Lifecycle](https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle)
 * [Managing Your App's Life Cycle - Apple](https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle)
