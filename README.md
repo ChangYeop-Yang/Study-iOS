@@ -92,21 +92,20 @@ Lets you know that your app is being terminated. This method is not called if yo
   <img src="https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/WWVC_vclife_2x.png" width="350" height="350" />
 </p>
 
-* **viewDidLoad()** 
+* **viewDidLoad**</br>
 **Called when the view controller’s content view (the top of its view hierarchy) is created and loaded from a storyboard.** The view controller’s outlets are guaranteed to have valid values by the time this method is called. Use this method to perform any additional setup required by your view controller.
-
 </br></br>**Typically, iOS calls viewDidLoad() only once, when its content view is first created;** however, the content view is not necessarily created when the controller is first instantiated. Instead, it is lazily created the first time the system or any code accesses the controller’s view property.
 
-* **viewWillAppear()** 
+* **viewWillAppear**</br>
 **Called just before the view controller’s content view is added to the app’s view hierarchy.** Use this method to trigger any operations that need to occur before the content view is presented onscreen. Despite the name, just because the system calls this method, it does not guarantee that the content view will become visible. The view may be obscured by other views or hidden. This method simply indicates that the content view is about to be added to the app’s view hierarchy.
 
-* **viewDidAppear()** 
+* **viewDidAppear**</br>
 **Called just after the view controller’s content view has been added to the app’s view hierarchy.** Use this method to trigger any operations that need to occur as soon as the view is presented onscreen, such as fetching data or showing an animation. Despite the name, just because the system calls this method, it does not guarantee that the content view is visible. The view may be obscured by other views or hidden. This method simply indicates that the content view has been added to the app’s view hierarchy.
 
-* **viewWillDisappear()** 
+* **viewWillDisappear**</br>
 **Called just before the view controller’s content view is removed from the app’s view hierarchy.** Use this method to perform cleanup tasks like committing changes or resigning the first responder status. Despite the name, the system does not call this method just because the content view will be hidden or obscured. This method is only called when the content view is about to be removed from the app’s view hierarchy.
 
-* **viewDidDisappear()** 
+* **viewDidDisappear**</br>
 **Called just after the view controller’s content view has been removed from the app’s view hierarchy.** Use this method to perform additional teardown activities. Despite the name, the system does not call this method just because the content view has become hidden or obscured. This method is only called when the content view has been removed from the app’s view hierarchy.
 
 ## ★ REFERENCE
