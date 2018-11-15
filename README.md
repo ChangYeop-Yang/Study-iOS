@@ -164,4 +164,4 @@ Called to notify the view controller that its view is about to layout its subvie
 * [viewDidLayoutSubviews - App Programming Guide for iOS](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621398-viewdidlayoutsubviews)
 * [View Controller Lifecycle Explained: When to Use viewDidLayoutSubviews](https://www.appcoda.com/view-controller-lifecycle/)
 * [Automatic Reference Counting - 위키백과](https://en.wikipedia.org/wiki/Automatic_Reference_Counting)
-* [Transitioning to ARC Release Notes - ](https://developer.apple.com/library/archive/releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011226)
+* [Transitioning to ARC Release Notes - Apple](https://developer.apple.com/library/archive/releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011226)
