@@ -11,6 +11,25 @@ iOS (formerly iPhone OS) is a mobile operating system created and developed by A
 </br></br> ARC differs from tracing garbage collection in that there is no background process that deallocates the objects asynchronously at runtime. Unlike garbage collection, ARC does not handle reference cycles automatically. This means that as long as there are "strong" references to an object, it will not be deallocated. **Strong cross-references can accordingly create deadlocks and memory leaks. It is up to the developer to break cycles by using weak references.**
 </br></br> Apple Inc. deploys ARC in their operating systems, such as macOS (OS X) and iOS. Limited support (ARCLite) has been available since Mac OS X Snow Leopard and iOS 4, with complete support following in Mac OS X Lion and iOS 5. Garbage collection was declared deprecated in OS X Mountain Lion, in favor of ARC, and removed from the Objective-C runtime library in macOS Sierra.
 
+* * *
+
+#### ★ Automatic Reference Counting - Swift
+
+* In Swift, references to objects are strong, unless they are declared weak or unowned. Swift requires explicit handling of nil with the Optional type: a value type that can either have a value or be nil. An Optional type must be handled by "unwrapping" it with a conditional statement, allowing safe usage of the value, if present. Conversely, any non-Optional type will always have a value and cannot be nil. </br></br> Accordingly, a strong reference to an object cannot be of type Optional, as the object will be kept in the heap until the reference itself is deallocated. A weak reference is of type Optional, as the object can be deallocated and the reference be set to nil. Unowned references fall in-between; they are neither strong nor of type Optional. Instead, the compiler assumes that the object to which an unowned reference points is not deallocated as long the reference itself remains allocated. This is typically used in situations where the target object itself holds a reference to the object that holds the unowned reference. </br></br> Swift also differs from Objective-C in its usage and encouragement of value types instead of reference types. Most types in the Swift standard library are value types and they are copied by reference, whereas classes and closures are reference types and passed by reference. Because value types are copied when passed around, they are deallocated automatically with the reference that created them.
+
+```swift
+var myString: String                   // Can only be a string
+var myOtherString: String?             // Can be a string or nil
+
+if let myString = myOtherString {      // Unwrap the Optional
+    print(myString)                    // Print the string, if present 
+}
+
+var strongReference: MyClass          // Strong reference, cannot be nil
+weak var weakReference: MyClass?      // Weak reference, can be nil
+unowned var unownedReference: MyClass // Weak reference, cannot be nil
+```
+
 ## ★ iOS Application Life Cycle
 
 <p align="center">
@@ -145,3 +164,4 @@ Called to notify the view controller that its view is about to layout its subvie
 * [viewDidLayoutSubviews - App Programming Guide for iOS](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621398-viewdidlayoutsubviews)
 * [View Controller Lifecycle Explained: When to Use viewDidLayoutSubviews](https://www.appcoda.com/view-controller-lifecycle/)
 * [Automatic Reference Counting - 위키백과](https://en.wikipedia.org/wiki/Automatic_Reference_Counting)
+* [Transitioning to ARC Release Notes - ](https://developer.apple.com/library/archive/releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011226)
