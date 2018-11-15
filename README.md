@@ -1,6 +1,16 @@
 # Study-iOS
 iOS (formerly iPhone OS) is a mobile operating system created and developed by Apple Inc. exclusively for its hardware. It is the operating system that presently powers many of the company's mobile devices, including the iPhone, iPad, and iPod Touch. It is the second most popular mobile operating system globally after Android.
 
+## ★ Automatic Reference Counting (ARC)
+
+|ARC Image 001|ARC Image 002|
+|:-----------:|:-----------:|
+|![](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/MemoryMgmt/Art/memory_management_2x.png)|![](https://developer.apple.com/library/archive/releasenotes/ObjectiveC/RN-TransitioningToARC/Art/ARC_Illustration.jpg)|
+
+* Automatic Reference Counting (ARC) is a memory management feature of the Clang compiler providing automatic reference counting for the Objective-C and Swift programming languages. **At compile time, it inserts into the object code messages retain and release which increase and decrease the reference count at run time, marking for deallocation those objects when the number of references to them reaches zero.**
+</br></br> ARC differs from tracing garbage collection in that there is no background process that deallocates the objects asynchronously at runtime. Unlike garbage collection, ARC does not handle reference cycles automatically. This means that as long as there are "strong" references to an object, it will not be deallocated. **Strong cross-references can accordingly create deadlocks and memory leaks. It is up to the developer to break cycles by using weak references.**
+</br></br> Apple Inc. deploys ARC in their operating systems, such as macOS (OS X) and iOS. Limited support (ARCLite) has been available since Mac OS X Snow Leopard and iOS 4, with complete support following in Mac OS X Lion and iOS 5. Garbage collection was declared deprecated in OS X Mountain Lion, in favor of ARC, and removed from the Objective-C runtime library in macOS Sierra.
+
 ## ★ iOS Application Life Cycle
 
 <p align="center">
@@ -134,3 +144,4 @@ Called to notify the view controller that its view is about to layout its subvie
 * [Work with View Controllers - App Programming Guide for iOS](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/WorkWithViewControllers.html)
 * [viewDidLayoutSubviews - App Programming Guide for iOS](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621398-viewdidlayoutsubviews)
 * [View Controller Lifecycle Explained: When to Use viewDidLayoutSubviews](https://www.appcoda.com/view-controller-lifecycle/)
+* [Automatic Reference Counting - 위키백과](https://en.wikipedia.org/wiki/Automatic_Reference_Counting)
