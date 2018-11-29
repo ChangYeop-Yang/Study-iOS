@@ -156,6 +156,16 @@ Lets you know that your app is being terminated. This method is not called if yo
 * **viewWillLayoutSubviews**</br>
 Called to notify the view controller that its view is about to layout its subviews. When a view's bounds change, the view adjusts the position of its subviews. Your view controller can override this method to make changes before the view lays out its subviews. The default implementation of this method does nothing.
 
+## ★ CORE ML
+
+* Core ML is the foundation for domain-specific frameworks and functionality. Core ML supports Vision for image analysis, Natural Language for natural language processing, and GameplayKit for evaluating learned decision trees. Core ML itself builds on top of low-level primitives like Accelerate and BNNS, as well as Metal Performance Shaders.
+
+* Core ML is optimized for on-device performance, which minimizes memory footprint and power consumption. Running strictly on the device ensures the privacy of user data and guarantees that your app remains functional and responsive when a network connection is unavailable.
+
+|Core ML 001|Core ML 002|
+|:---------:|:---------:|
+|![](https://docs-assets.developer.apple.com/published/7e05fb5a2e/4b0ecf58-a51a-4bfa-a361-eb77e59ed76e.png)|![](https://docs-assets.developer.apple.com/published/479d7b4500/0c857af6-45e4-4fac-ad84-4aeb8c01b5a3.png)|
+
 ## ★ REFERENCE
 * [The iOS Application Lifecycle](https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle)
 * [Managing Your App's Life Cycle - Apple](https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle)
@@ -165,3 +175,5 @@ Called to notify the view controller that its view is about to layout its subvie
 * [View Controller Lifecycle Explained: When to Use viewDidLayoutSubviews](https://www.appcoda.com/view-controller-lifecycle/)
 * [Automatic Reference Counting - 위키백과](https://en.wikipedia.org/wiki/Automatic_Reference_Counting)
 * [Transitioning to ARC Release Notes - Apple](https://developer.apple.com/library/archive/releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011226)
+* [Core ML - Apple](https://developer.apple.com/documentation/coreml)
+* [Core ML and Vision: Machine Learning in iOS 11 Tutorial](https://www.raywenderlich.com/577-core-ml-and-vision-machine-learning-in-ios-11-tutorial)
