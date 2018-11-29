@@ -162,7 +162,7 @@ Called to notify the view controller that its view is about to layout its subvie
 
 * Core ML is optimized for on-device performance, which minimizes memory footprint and power consumption. Running strictly on the device ensures the privacy of user data and guarantees that your app remains functional and responsive when a network connection is unavailable.
 
-|Core ML 001|Core ML 002|
+|Core ML Image 001|Core ML Image 002|
 |:---------:|:---------:|
 |![](https://docs-assets.developer.apple.com/published/7e05fb5a2e/4b0ecf58-a51a-4bfa-a361-eb77e59ed76e.png)|![](https://docs-assets.developer.apple.com/published/479d7b4500/0c857af6-45e4-4fac-ad84-4aeb8c01b5a3.png)|
 
