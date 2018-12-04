@@ -170,7 +170,7 @@ Called to notify the view controller that its view is about to layout its subvie
 
 * Core Data is a framework that you use to manage the model layer objects in your application. It provides generalized and automated solutions to common tasks associated with object life cycle and object graph management, including persistence.
 
-#### Core Data Save Example
+#### ※ Core Data Save Example
 
 ```swift
 guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -183,7 +183,7 @@ do { try managedContext.save() }
 catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
 ```
 
-#### Core Data Load Example
+#### ※ Core Data Load Example
 
 ```swift
 guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -192,6 +192,18 @@ let managedContext = appDelegate.persistentContainer.viewContext
 let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity Name")
         
 do { let objects = try managedContext.fetch(fetchRequest) as! [Object Type] } 
+catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
+```
+
+#### ※ Core Data Delete Example
+
+```swift
+guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+let managedContext = appDelegate.persistentContainer.viewContext
+managedContext.delete(self.people.remove(at: index))
+        
+do { try managedContext.save() }
 catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
 ```
 
