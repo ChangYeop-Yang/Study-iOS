@@ -201,7 +201,7 @@ catch let error as NSError { print("Could net save. \(error.debugDescription), \
 guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
 let managedContext = appDelegate.persistentContainer.viewContext
-managedContext.delete(self.people.remove(at: index))
+managedContext.delete(Entity Object)
         
 do { try managedContext.save() }
 catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
