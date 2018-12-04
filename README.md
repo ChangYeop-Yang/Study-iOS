@@ -173,7 +173,12 @@ Called to notify the view controller that its view is about to layout its subvie
     // N 번째 섹션에 M 번째 Row를 그리는데 필요한 셀을 반환하는 메소드
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: UITableViewCell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell Identification")
+        // Basic Type
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell Identification")
+        
+        // Custom Type
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell Identification", for: indexPath) as! Cell Type
+        
         return cell
     }
 ```
