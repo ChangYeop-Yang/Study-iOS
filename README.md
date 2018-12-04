@@ -179,7 +179,7 @@ let managedContext = appDelegate.persistentContainer.viewContext
         
 // Object and Relation here.
     
-do {    try managedContext.save()   }
+do { try managedContext.save() }
 catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
 ```
 
@@ -191,7 +191,7 @@ guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelega
 let managedContext = appDelegate.persistentContainer.viewContext
 let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity Name")
         
-do { Objects = try managedContext.fetch(fetchRequest) as! [Object Type] } 
+do { let objects = try managedContext.fetch(fetchRequest) as! [Object Type] } 
 catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
 ```
 
