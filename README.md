@@ -222,4 +222,4 @@ catch let error as NSError { print("Could net save. \(error.debugDescription), \
 * [Core ML and Vision: Machine Learning in iOS 11 Tutorial](https://www.raywenderlich.com/577-core-ml-and-vision-machine-learning-in-ios-11-tutorial)
 * [Memory management - App Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MemoryManagement.html#//apple_ref/doc/uid/TP40008195-CH27-SW1)
 * [What Is Core Data? - App Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/index.html#//apple_ref/doc/uid/TP40001075-CH2-SW1)
-* [CoreData - ](https://en.wikipedia.org/wiki/Core_Data)
+* [Core Data - 위키백과](https://en.wikipedia.org/wiki/Core_Data)
