@@ -156,6 +156,46 @@ Lets you know that your app is being terminated. This method is not called if yo
 * **viewWillLayoutSubviews**</br>
 Called to notify the view controller that its view is about to layout its subviews. When a view's bounds change, the view adjusts the position of its subviews. Your view controller can override this method to make changes before the view lays out its subviews. The default implementation of this method does nothing.
 
+## ★ UIKit
+
+#### # UITableView
+
+* A table view displays a list of items in a single column. UITableView is a subclass of UIScrollView, which allows users to scroll through the table, although UITableView allows vertical scrolling only. The cells comprising the individual items of the table are UITableViewCell objects; UITableView uses these objects to draw the visible rows of the table. Cells have content—titles and images—and can have, near the right edge, accessory views. Standard accessory views are disclosure indicators or detail disclosure buttons; the former leads to the next level in a data hierarchy and the latter leads to a detailed view of a selected item. Accessory views can also be framework controls, such as switches and sliders, or can be custom views. Table views can enter an editing mode where users can insert, delete, and reorder rows of the table.
+
+###### ※ UITableViewDataSource
+
+```swift
+    // N 번째 섹션에 몇 개의 Row가 존재하는지를 반환하는 메소드
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    // N 번째 섹션에 M 번째 Row를 그리는데 필요한 셀을 반환하는 메소드
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell: UITableViewCell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell Identification")
+        return cell
+    }
+```
+
+###### ※ UITableViewDelegate
+
+```swift
+    // 사용자가 Cell을 선택시 Cell의 인덱스를 반환하는 메소드
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)     {
+        if (editingStyle == .delete) {
+            // Delete Tableview cell here
+        }
+    }
+```
+
 ## ★ CORE ML
 
 * Core ML is the foundation for domain-specific frameworks and functionality. Core ML supports Vision for image analysis, Natural Language for natural language processing, and GameplayKit for evaluating learned decision trees. Core ML itself builds on top of low-level primitives like Accelerate and BNNS, as well as Metal Performance Shaders.
@@ -223,3 +263,4 @@ catch let error as NSError { print("Could net save. \(error.debugDescription), \
 * [Memory management - App Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MemoryManagement.html#//apple_ref/doc/uid/TP40008195-CH27-SW1)
 * [What Is Core Data? - App Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/index.html#//apple_ref/doc/uid/TP40001075-CH2-SW1)
 * [Core Data - 위키백과](https://en.wikipedia.org/wiki/Core_Data)
+* [UITableView - App Programming Guide for iOS](https://developer.apple.com/documentation/uikit/uitableview)
