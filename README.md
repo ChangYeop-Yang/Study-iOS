@@ -190,6 +190,7 @@ Called to notify the view controller that its view is about to layout its subvie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
     
+    // Set UITableview swipe to delete here
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
