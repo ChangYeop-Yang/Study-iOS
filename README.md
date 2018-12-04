@@ -170,6 +170,8 @@ Called to notify the view controller that its view is about to layout its subvie
 
 * Core Data is a framework that you use to manage the model layer objects in your application. It provides generalized and automated solutions to common tasks associated with object life cycle and object graph management, including persistence.
 
+* Core Data is an object graph and persistence framework provided by Apple in the macOS and iOS operating systems. It was introduced in Mac OS X 10.4 Tiger and iOS with iPhone SDK 3.0. It allows data organized by the relational entity–attribute model to be serialized into XML, binary, or SQLite stores. The data can be manipulated using higher level objects representing entities and their relationships. Core Data manages the serialized version, providing object lifecycle and object graph management, including persistence. Core Data interfaces directly with SQLite, insulating the developer from the underlying SQL.
+
 #### ※ Core Data Save Example
 
 ```swift
@@ -220,3 +222,4 @@ catch let error as NSError { print("Could net save. \(error.debugDescription), \
 * [Core ML and Vision: Machine Learning in iOS 11 Tutorial](https://www.raywenderlich.com/577-core-ml-and-vision-machine-learning-in-ios-11-tutorial)
 * [Memory management - App Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MemoryManagement.html#//apple_ref/doc/uid/TP40008195-CH27-SW1)
 * [What Is Core Data? - App Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/index.html#//apple_ref/doc/uid/TP40001075-CH2-SW1)
+* [CoreData - ](https://en.wikipedia.org/wiki/Core_Data)
