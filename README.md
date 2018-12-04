@@ -166,6 +166,47 @@ Called to notify the view controller that its view is about to layout its subvie
 |:---------:|:---------:|
 |![](https://docs-assets.developer.apple.com/published/7e05fb5a2e/4b0ecf58-a51a-4bfa-a361-eb77e59ed76e.png)|![](https://docs-assets.developer.apple.com/published/479d7b4500/0c857af6-45e4-4fac-ad84-4aeb8c01b5a3.png)|
 
+## ★ CORE DATA
+
+* Core Data is a framework that you use to manage the model layer objects in your application. It provides generalized and automated solutions to common tasks associated with object life cycle and object graph management, including persistence.
+
+#### Core Data Save Example
+
+```swift
+guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        /* Core Data Entity here.
+            let person: Person = Person(context: managedContext)
+            person.name = name
+            person.age = Int16(age)
+        */
+        
+        /* Core Data Relation here. -> one to many
+            let family1: Family = Family(context: managedContext)
+            family1.family = "001 Child \(Int.random(in: 0..<100)) - \(name)"
+
+            let family2: Family = Family(context: managedContext)
+            family2.family = "002 Child \(Int.random(in: 0..<100)) - \(name)"
+
+            person.addToChild(family1)
+            person.addToChild(family2)
+        /*    
+    
+        do {
+            try managedContext.save()
+            
+            /* TableView Update and Object Update
+                self.people.append(person)
+                self.table.reloadData()
+            */
+        }
+        catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
+```
+
 ## ★ REFERENCE
 * [The iOS Application Lifecycle](https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle)
 * [Managing Your App's Life Cycle - Apple](https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle)
