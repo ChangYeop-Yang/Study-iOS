@@ -173,16 +173,26 @@ Called to notify the view controller that its view is about to layout its subvie
 #### Core Data Save Example
 
 ```swift
-guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
+guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
-        let managedContext = appDelegate.persistentContainer.viewContext
+let managedContext = appDelegate.persistentContainer.viewContext
         
-        // Object and Relation here.
+// Object and Relation here.
     
-        do {    try managedContext.save()   }
-        catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
+do {    try managedContext.save()   }
+catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
+```
+
+#### Core Data Load Example
+
+```swift
+guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+let managedContext = appDelegate.persistentContainer.viewContext
+let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity Name")
+        
+do { Objects = try managedContext.fetch(fetchRequest) as! [Object Type] } 
+catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
 ```
 
 ## ★ REFERENCE
