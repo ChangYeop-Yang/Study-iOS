@@ -179,31 +179,9 @@ guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelega
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        /* Core Data Entity here.
-            let person: Person = Person(context: managedContext)
-            person.name = name
-            person.age = Int16(age)
-        */
-        
-        /* Core Data Relation here. -> one to many
-            let family1: Family = Family(context: managedContext)
-            family1.family = "001 Child \(Int.random(in: 0..<100)) - \(name)"
-
-            let family2: Family = Family(context: managedContext)
-            family2.family = "002 Child \(Int.random(in: 0..<100)) - \(name)"
-
-            person.addToChild(family1)
-            person.addToChild(family2)
-        /*    
+        // Object and Relation here.
     
-        do {
-            try managedContext.save()
-            
-            /* TableView Update and Object Update
-                self.people.append(person)
-                self.table.reloadData()
-            */
-        }
+        do {    try managedContext.save()   }
         catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
 ```
 
