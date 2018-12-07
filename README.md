@@ -219,7 +219,56 @@ Called to notify the view controller that its view is about to layout its subvie
 
 * Core Data is an object graph and persistence framework provided by Apple in the macOS and iOS operating systems. It was introduced in Mac OS X 10.4 Tiger and iOS with iPhone SDK 3.0. It allows data organized by the relational entity–attribute model to be serialized into XML, binary, or SQLite stores. The data can be manipulated using higher level objects representing entities and their relationships. Core Data manages the serialized version, providing object lifecycle and object graph management, including persistence. Core Data interfaces directly with SQLite, insulating the developer from the underlying SQL.
 
-#### ※ Core Data Save Example
+#### ※ Core Data AppDelegate Source Code
+
+```swift
+// MARK: - Core Data stack
+
+    lazy var persistentContainer: NSPersistentContainer = {
+        /*
+         The persistent container for the application. This implementation
+         creates and returns a container, having loaded the store for the
+         application to it. This property is optional since there are legitimate
+         error conditions that could cause the creation of the store to fail.
+        */
+        let container = NSPersistentContainer(name: "CoreDataFileName")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                 
+                /*
+                 Typical reasons for an error here include:
+                 * The parent directory does not exist, cannot be created, or disallows writing.
+                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
+                 * The device is out of space.
+                 * The store could not be migrated to the current model version.
+                 Check the error message to determine what the actual problem was.
+                 */
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+
+    // MARK: - Core Data Saving support
+
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
+```
+
+#### ※ Core Data Save Example Source Code
 
 ```swift
 guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -232,7 +281,7 @@ do { try managedContext.save() }
 catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
 ```
 
-#### ※ Core Data Load Example
+#### ※ Core Data Load Example Source Code
 
 ```swift
 guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -244,7 +293,7 @@ do { let objects = try managedContext.fetch(fetchRequest) as! [Object Type] }
 catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
 ```
 
-#### ※ Core Data Delete Example
+#### ※ Core Data Delete Example Source Code
 
 ```swift
 guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
