@@ -320,3 +320,9 @@ catch let error as NSError { print("Could net save. \(error.debugDescription), \
 * [What Is Core Data? - App Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/index.html#//apple_ref/doc/uid/TP40001075-CH2-SW1)
 * [Core Data - 위키백과](https://en.wikipedia.org/wiki/Core_Data)
 * [UITableView - App Programming Guide for iOS](https://developer.apple.com/documentation/uikit/uitableview)
+
+## ★ Developer Information
+
+|:rocket: Github QR Code|:pencil: Naver-Blog QR Code|:eyeglasses: Linked-In QR Code|
+|:---------------------:|:-------------------------:|:----------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/50044128-60406880-00c2-11e9-8d57-ea1cb8e6b2a7.jpg)|![](https://user-images.githubusercontent.com/20036523/50044131-60d8ff00-00c2-11e9-818c-cf5ad97dc76e.jpg)|![](https://user-images.githubusercontent.com/20036523/50044130-60d8ff00-00c2-11e9-991a-107bffa2bf57.jpg)|
