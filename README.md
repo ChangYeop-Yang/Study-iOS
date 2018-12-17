@@ -306,20 +306,34 @@ catch let error as NSError { print("Could net save. \(error.debugDescription), \
 ```
 
 ## ★ REFERENCE
-* [The iOS Application Lifecycle](https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle)
-* [Managing Your App's Life Cycle - Apple](https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle)
-* [The App Life Cycle - App Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW1)
-* [Work with View Controllers - App Programming Guide for iOS](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/WorkWithViewControllers.html)
-* [viewDidLayoutSubviews - App Programming Guide for iOS](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621398-viewdidlayoutsubviews)
-* [View Controller Lifecycle Explained: When to Use viewDidLayoutSubviews](https://www.appcoda.com/view-controller-lifecycle/)
-* [Automatic Reference Counting - 위키백과](https://en.wikipedia.org/wiki/Automatic_Reference_Counting)
-* [Transitioning to ARC Release Notes - Apple](https://developer.apple.com/library/archive/releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011226)
-* [Core ML - Apple](https://developer.apple.com/documentation/coreml)
-* [Core ML and Vision: Machine Learning in iOS 11 Tutorial](https://www.raywenderlich.com/577-core-ml-and-vision-machine-learning-in-ios-11-tutorial)
-* [Memory management - App Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MemoryManagement.html#//apple_ref/doc/uid/TP40008195-CH27-SW1)
-* [What Is Core Data? - App Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/index.html#//apple_ref/doc/uid/TP40001075-CH2-SW1)
-* [Core Data - 위키백과](https://en.wikipedia.org/wiki/Core_Data)
-* [UITableView - App Programming Guide for iOS](https://developer.apple.com/documentation/uikit/uitableview)
+
+:airplane: [The iOS Application Lifecycle](https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle)
+
+:airplane: [Managing Your App's Life Cycle - Apple](https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle)
+
+:airplane: [The App Life Cycle - App Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW1)
+
+:airplane: [Work with View Controllers - App Programming Guide for iOS](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/WorkWithViewControllers.html)
+
+:airplane: [viewDidLayoutSubviews - App Programming Guide for iOS](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621398-viewdidlayoutsubviews)
+
+:airplane: [View Controller Lifecycle Explained: When to Use viewDidLayoutSubviews](https://www.appcoda.com/view-controller-lifecycle/)
+
+:airplane: [Automatic Reference Counting - 위키백과](https://en.wikipedia.org/wiki/Automatic_Reference_Counting)
+
+:airplane: [Transitioning to ARC Release Notes - Apple](https://developer.apple.com/library/archive/releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011226)
+
+:airplane: [Core ML - Apple](https://developer.apple.com/documentation/coreml)
+
+:airplane: [Core ML and Vision: Machine Learning in iOS 11 Tutorial](https://www.raywenderlich.com/577-core-ml-and-vision-machine-learning-in-ios-11-tutorial)
+
+:airplane: [Memory management - App Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MemoryManagement.html#//apple_ref/doc/uid/TP40008195-CH27-SW1)
+
+:airplane: [What Is Core Data? - App Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/index.html#//apple_ref/doc/uid/TP40001075-CH2-SW1)
+
+:airplane: [Core Data - 위키백과](https://en.wikipedia.org/wiki/Core_Data)
+
+:airplane: [UITableView - App Programming Guide for iOS](https://developer.apple.com/documentation/uikit/uitableview)
 
 ## ★ Developer Information
 
