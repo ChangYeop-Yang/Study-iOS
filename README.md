@@ -4,8 +4,8 @@
 
 ## ★ Automatic Reference Counting (ARC)
 
-|ARC Image 001|ARC Image 002|
-|:-----------:|:-----------:|
+|:camera: ARC Image 001|:camera: ARC Image 002|
+|:--------------------:|:--------------------:|
 |![](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/MemoryMgmt/Art/memory_management_2x.png)|![](https://developer.apple.com/library/archive/releasenotes/ObjectiveC/RN-TransitioningToARC/Art/ARC_Illustration.jpg)|
 
 * Automatic Reference Counting (ARC) is a memory management feature of the Clang compiler providing automatic reference counting for the Objective-C and Swift programming languages. **At compile time, it inserts into the object code messages retain and release which increase and decrease the reference count at run time, marking for deallocation those objects when the number of references to them reaches zero.**
@@ -209,8 +209,8 @@ Called to notify the view controller that its view is about to layout its subvie
 
 * Core ML is optimized for on-device performance, which minimizes memory footprint and power consumption. Running strictly on the device ensures the privacy of user data and guarantees that your app remains functional and responsive when a network connection is unavailable.
 
-|Core ML Image 001|Core ML Image 002|
-|:---------:|:---------:|
+|:camera: Core ML Image 001|:camera: Core ML Image 002|
+|:------------------------:|:------------------------:|
 |![](https://docs-assets.developer.apple.com/published/7e05fb5a2e/4b0ecf58-a51a-4bfa-a361-eb77e59ed76e.png)|![](https://docs-assets.developer.apple.com/published/479d7b4500/0c857af6-45e4-4fac-ad84-4aeb8c01b5a3.png)|
 
 ## ★ CORE DATA
