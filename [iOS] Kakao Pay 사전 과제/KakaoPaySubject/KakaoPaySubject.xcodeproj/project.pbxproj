@@ -20,6 +20,9 @@
 		0CF0DB6D21E84B8F00B7C3CA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CF0DB6C21E84B8F00B7C3CA /* Home.storyboard */; };
 		0CF0DB6F21E84BD800B7C3CA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CF0DB6E21E84BD800B7C3CA /* Setting.storyboard */; };
 		0CF0DB7121E84C2F00B7C3CA /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0DB7021E84C2F00B7C3CA /* ConnectViewController.swift */; };
+		2181258BCD38CB76C366F240 /* Pods_KakaoPaySubjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C864E13CA0980387701726 /* Pods_KakaoPaySubjectTests.framework */; };
+		90020EB8E17BCC8F12FEC90E /* Pods_KakaoPaySubjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5030EC028AF3150779B41B14 /* Pods_KakaoPaySubjectUITests.framework */; };
+		95614C0E0BC626B3D9BFB3D4 /* Pods_KakaoPaySubject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA04781B5505DA9F5E1C621 /* Pods_KakaoPaySubject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,15 @@
 		0CF0DB6C21E84B8F00B7C3CA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		0CF0DB6E21E84BD800B7C3CA /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		0CF0DB7021E84C2F00B7C3CA /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
+		33C864E13CA0980387701726 /* Pods_KakaoPaySubjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KakaoPaySubjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5030EC028AF3150779B41B14 /* Pods_KakaoPaySubjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KakaoPaySubjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FA04781B5505DA9F5E1C621 /* Pods_KakaoPaySubject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KakaoPaySubject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A476DC1BE44BEB9B89ED05 /* Pods-KakaoPaySubjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KakaoPaySubjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KakaoPaySubjectUITests/Pods-KakaoPaySubjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7FF2530BE637F294F3D44432 /* Pods-KakaoPaySubject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KakaoPaySubject.release.xcconfig"; path = "Pods/Target Support Files/Pods-KakaoPaySubject/Pods-KakaoPaySubject.release.xcconfig"; sourceTree = "<group>"; };
+		966B0C3B22413EF3C8AE9D76 /* Pods-KakaoPaySubjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KakaoPaySubjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KakaoPaySubjectTests/Pods-KakaoPaySubjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		9FAAE4DDE410EAF525162E31 /* Pods-KakaoPaySubject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KakaoPaySubject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KakaoPaySubject/Pods-KakaoPaySubject.debug.xcconfig"; sourceTree = "<group>"; };
+		DA3394F647BB949856E0ED6F /* Pods-KakaoPaySubjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KakaoPaySubjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KakaoPaySubjectUITests/Pods-KakaoPaySubjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE0D34449EF788967CF3F6C5 /* Pods-KakaoPaySubjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KakaoPaySubjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KakaoPaySubjectTests/Pods-KakaoPaySubjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95614C0E0BC626B3D9BFB3D4 /* Pods_KakaoPaySubject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2181258BCD38CB76C366F240 /* Pods_KakaoPaySubjectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90020EB8E17BCC8F12FEC90E /* Pods_KakaoPaySubjectUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +108,8 @@
 				0CF0DB4521E84A1F00B7C3CA /* KakaoPaySubjectTests */,
 				0CF0DB5021E84A1F00B7C3CA /* KakaoPaySubjectUITests */,
 				0CF0DB2D21E84A1D00B7C3CA /* Products */,
+				3D3EEB3BC505A116843C0C69 /* Pods */,
+				AF4301080345BC67F60CA82A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +216,29 @@
 			path = "TableViewCell Files";
 			sourceTree = "<group>";
 		};
+		3D3EEB3BC505A116843C0C69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FAAE4DDE410EAF525162E31 /* Pods-KakaoPaySubject.debug.xcconfig */,
+				7FF2530BE637F294F3D44432 /* Pods-KakaoPaySubject.release.xcconfig */,
+				FE0D34449EF788967CF3F6C5 /* Pods-KakaoPaySubjectTests.debug.xcconfig */,
+				966B0C3B22413EF3C8AE9D76 /* Pods-KakaoPaySubjectTests.release.xcconfig */,
+				DA3394F647BB949856E0ED6F /* Pods-KakaoPaySubjectUITests.debug.xcconfig */,
+				70A476DC1BE44BEB9B89ED05 /* Pods-KakaoPaySubjectUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF4301080345BC67F60CA82A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FA04781B5505DA9F5E1C621 /* Pods_KakaoPaySubject.framework */,
+				33C864E13CA0980387701726 /* Pods_KakaoPaySubjectTests.framework */,
+				5030EC028AF3150779B41B14 /* Pods_KakaoPaySubjectUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CF0DB5621E84A1F00B7C3CA /* Build configuration list for PBXNativeTarget "KakaoPaySubject" */;
 			buildPhases = (
+				FC34AB3B592FB0B8CB035AC5 /* [CP] Check Pods Manifest.lock */,
 				0CF0DB2821E84A1D00B7C3CA /* Sources */,
 				0CF0DB2921E84A1D00B7C3CA /* Frameworks */,
 				0CF0DB2A21E84A1D00B7C3CA /* Resources */,
+				6C266CB447FA07D52DC57023 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,6 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CF0DB5921E84A1F00B7C3CA /* Build configuration list for PBXNativeTarget "KakaoPaySubjectTests" */;
 			buildPhases = (
+				75725714E2A17D180C4DE720 /* [CP] Check Pods Manifest.lock */,
 				0CF0DB3E21E84A1F00B7C3CA /* Sources */,
 				0CF0DB3F21E84A1F00B7C3CA /* Frameworks */,
 				0CF0DB4021E84A1F00B7C3CA /* Resources */,
@@ -241,6 +284,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CF0DB5C21E84A1F00B7C3CA /* Build configuration list for PBXNativeTarget "KakaoPaySubjectUITests" */;
 			buildPhases = (
+				6355EC2F85837BD4163F7B47 /* [CP] Check Pods Manifest.lock */,
 				0CF0DB4921E84A1F00B7C3CA /* Sources */,
 				0CF0DB4A21E84A1F00B7C3CA /* Frameworks */,
 				0CF0DB4B21E84A1F00B7C3CA /* Resources */,
@@ -327,6 +371,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6355EC2F85837BD4163F7B47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KakaoPaySubjectUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C266CB447FA07D52DC57023 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KakaoPaySubject/Pods-KakaoPaySubject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Whisper/Whisper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Whisper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KakaoPaySubject/Pods-KakaoPaySubject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75725714E2A17D180C4DE720 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KakaoPaySubjectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC34AB3B592FB0B8CB035AC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KakaoPaySubject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0CF0DB2821E84A1D00B7C3CA /* Sources */ = {
@@ -510,6 +629,7 @@
 		};
 		0CF0DB5721E84A1F00B7C3CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FAAE4DDE410EAF525162E31 /* Pods-KakaoPaySubject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +648,7 @@
 		};
 		0CF0DB5821E84A1F00B7C3CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FF2530BE637F294F3D44432 /* Pods-KakaoPaySubject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +667,7 @@
 		};
 		0CF0DB5A21E84A1F00B7C3CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE0D34449EF788967CF3F6C5 /* Pods-KakaoPaySubjectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -567,6 +689,7 @@
 		};
 		0CF0DB5B21E84A1F00B7C3CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 966B0C3B22413EF3C8AE9D76 /* Pods-KakaoPaySubjectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -588,6 +711,7 @@
 		};
 		0CF0DB5D21E84A1F00B7C3CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA3394F647BB949856E0ED6F /* Pods-KakaoPaySubjectUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -608,6 +732,7 @@
 		};
 		0CF0DB5E21E84A1F00B7C3CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70A476DC1BE44BEB9B89ED05 /* Pods-KakaoPaySubjectUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

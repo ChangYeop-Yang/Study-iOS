@@ -1,0 +1,6 @@
+framework module Pods_KakaoPaySubject {
+  umbrella header "Pods-KakaoPaySubject-umbrella.h"
+
+  export *
+  module * { export * }
+}

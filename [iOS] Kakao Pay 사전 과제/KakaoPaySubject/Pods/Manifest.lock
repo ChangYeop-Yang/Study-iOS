@@ -1,0 +1,16 @@
+PODS:
+  - Whisper (6.0.2)
+
+DEPENDENCIES:
+  - Whisper
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Whisper
+
+SPEC CHECKSUMS:
+  Whisper: 169760fc4bab0abf24d5529f9276f95c25cf1025
+
+PODFILE CHECKSUM: 8f07cb0742b06eba5de3662214ada45222d3dbde
+
+COCOAPODS: 1.5.2
