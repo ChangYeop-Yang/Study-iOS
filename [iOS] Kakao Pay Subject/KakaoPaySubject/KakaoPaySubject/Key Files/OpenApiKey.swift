@@ -1,0 +1,11 @@
+//
+//  OpenApiKey.swift
+//  KakaoPaySubject
+//
+//  Created by 양창엽 on 11/01/2019.
+//  Copyright © 2019 양창엽. All rights reserved.
+//
+
+// MARK: - WEATHER OPEN API KEY
+public let DUST_OPEN_API_KEY: String = "C2d%2FZz%2BaNt0m7s5ShL8GDXiwNqTXE3XETIIaRJDoSxvWxWm929sMakv3t6ZBz28U8cdE0N74NQkIAC1ppwaknw%3D%3D"
+public let WEATHER_OPEN_API_KEY: String = "1dce873b7cac9c395f9e708343303309"
