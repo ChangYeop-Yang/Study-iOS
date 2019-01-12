@@ -24,14 +24,17 @@
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eZC-cB-rYM">
                                         <rect key="frame" x="123.66666666666669" y="80" width="128" height="128"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="baseline_shutter_speed_white_48pt_1x" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6a6-AT-T4x">
-                                                <rect key="frame" x="20" y="20" width="88" height="88"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_shutter_speed_white_48pt_1x" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6a6-AT-T4x">
+                                                <rect key="frame" x="19.999999999999986" y="20" width="88" height="88"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="1HV-jH-z9l"/>
+                                            <constraint firstAttribute="bottom" secondItem="6a6-AT-T4x" secondAttribute="bottom" constant="20" id="KWa-Zz-o39"/>
+                                            <constraint firstItem="6a6-AT-T4x" firstAttribute="top" secondItem="eZC-cB-rYM" secondAttribute="top" constant="20" id="MOg-WL-xWD"/>
                                             <constraint firstAttribute="width" constant="128" id="QKk-Ih-Asp"/>
+                                            <constraint firstItem="6a6-AT-T4x" firstAttribute="leading" secondItem="eZC-cB-rYM" secondAttribute="leading" constant="20" id="Qse-aX-OcB"/>
+                                            <constraint firstAttribute="trailing" secondItem="6a6-AT-T4x" secondAttribute="trailing" constant="20" id="wBk-At-j2I"/>
                                         </constraints>
                                     </view>
                                     <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34h-uz-3cW" customClass="RoundView" customModule="KakaoPaySubject" customModuleProvider="target">

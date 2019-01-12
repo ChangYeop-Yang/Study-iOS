@@ -20,5 +20,6 @@ target 'KakaoPaySubject' do
   end
 
   pod 'Alamofire'
+  pod "SwiftSpinner"
 
 end

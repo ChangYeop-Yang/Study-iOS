@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftSpinner
 
 class HomeViewController: UIViewController {
     
@@ -28,6 +29,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SwiftSpinner.show("Just a moment", animated: true)
         
         showCurrentAddress()
         showWeatherInformation()
@@ -92,6 +95,8 @@ class HomeViewController: UIViewController {
         group.notify(queue: .main) { [unowned self] in
             self.tourListCV.dataSource   = self
             self.homeTabTBI.badgeValue   = "\(Tour.tourInstance.getTourInformation().count)"
+            
+            SwiftSpinner.hide()
         }
     }
 }
