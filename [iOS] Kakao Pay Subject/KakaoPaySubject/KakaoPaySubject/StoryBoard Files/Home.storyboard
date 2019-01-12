@@ -128,31 +128,53 @@
                                         <rect key="frame" x="0.0" y="250" width="375" height="479"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DgQ-AP-8f6">
-                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="itemSize" width="375" height="100"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="D99-mM-iQ3" customClass="DetailCell" customModule="KakaoPaySubject" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </view>
+                                                <size key="customSize" width="375" height="100"/>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYw-pg-e6J">
+                                        <rect key="frame" x="0.0" y="250" width="375" height="479"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page_not_found" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ud9-Ky-VCD">
+                                                <rect key="frame" x="87.666666666666686" y="139.66666666666669" width="200" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="0c3-yX-cw7"/>
+                                                    <constraint firstAttribute="height" constant="200" id="bvT-GK-v9m"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ud9-Ky-VCD" firstAttribute="centerY" secondItem="UYw-pg-e6J" secondAttribute="centerY" id="Xbw-ZY-2jk"/>
+                                            <constraint firstItem="ud9-Ky-VCD" firstAttribute="centerX" secondItem="UYw-pg-e6J" secondAttribute="centerX" id="lXO-tD-fIb"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="tmD-Wj-nuq" secondAttribute="trailing" id="C16-0L-9Xe"/>
+                                    <constraint firstItem="UYw-pg-e6J" firstAttribute="top" secondItem="tmD-Wj-nuq" secondAttribute="bottom" id="Fnc-yz-4JY"/>
+                                    <constraint firstItem="UYw-pg-e6J" firstAttribute="leading" secondItem="bFX-zn-k8n" secondAttribute="leading" id="IWm-dO-Noc"/>
                                     <constraint firstAttribute="trailing" secondItem="25s-88-cQX" secondAttribute="trailing" id="Rfx-Jf-TFb"/>
+                                    <constraint firstAttribute="trailing" secondItem="UYw-pg-e6J" secondAttribute="trailing" id="cLP-Ji-Ez9"/>
                                     <constraint firstItem="tmD-Wj-nuq" firstAttribute="top" secondItem="bFX-zn-k8n" secondAttribute="top" id="er7-Y8-dgI"/>
                                     <constraint firstItem="25s-88-cQX" firstAttribute="leading" secondItem="bFX-zn-k8n" secondAttribute="leading" id="jU3-kc-Lyo"/>
                                     <constraint firstItem="25s-88-cQX" firstAttribute="top" secondItem="tmD-Wj-nuq" secondAttribute="bottom" id="kbx-eJ-vU6"/>
                                     <constraint firstItem="tmD-Wj-nuq" firstAttribute="leading" secondItem="bFX-zn-k8n" secondAttribute="leading" id="nFA-vi-SI1"/>
+                                    <constraint firstAttribute="bottom" secondItem="UYw-pg-e6J" secondAttribute="bottom" id="pwq-O7-Ahg"/>
                                     <constraint firstAttribute="bottom" secondItem="25s-88-cQX" secondAttribute="bottom" id="wIh-tM-XD1"/>
                                 </constraints>
                             </view>
@@ -171,7 +193,10 @@
                     <connections>
                         <outlet property="addressLB" destination="yMx-6C-7Ib" id="rSF-qB-jhV"/>
                         <outlet property="dustStateLB" destination="8gJ-sC-Uop" id="EAq-J9-MwN"/>
+                        <outlet property="emptyV" destination="UYw-pg-e6J" id="VmM-Ph-OVh"/>
+                        <outlet property="homeTabTBI" destination="09B-al-wDi" id="dPh-GQ-z4u"/>
                         <outlet property="humidityStateLB" destination="kKm-F4-5US" id="IFf-3b-vXI"/>
+                        <outlet property="tourListCV" destination="25s-88-cQX" id="wwq-1P-E5J"/>
                         <outlet property="visualityStateLB" destination="Ykb-hE-KRS" id="5ro-fH-M5d"/>
                         <outlet property="wallPaperIMG" destination="w3U-ct-lJT" id="ujV-JS-Clx"/>
                         <outlet property="weatherLogoIMG" destination="j8i-ab-WLs" id="Dud-rl-bqV"/>
@@ -180,12 +205,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngm-bE-3ZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176.80000000000001" y="-28.335832083958024"/>
+            <point key="canvasLocation" x="176.80000000000001" y="-28.817733990147783"/>
         </scene>
     </scenes>
     <resources>
         <image name="baseline_home_white_24pt_1x" width="72" height="72"/>
         <image name="first" width="30" height="30"/>
+        <image name="page_not_found" width="256" height="256"/>
         <image name="weather_background" width="1920" height="1080"/>
     </resources>
 </document>

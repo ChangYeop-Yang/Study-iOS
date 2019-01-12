@@ -18,8 +18,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var humidityStateLB:     UILabel!
     @IBOutlet weak var dustStateLB:         UILabel!
     @IBOutlet weak var addressLB:           UILabel!
+    @IBOutlet weak var tourListCV:          UICollectionView!
+    @IBOutlet weak var homeTabTBI:          UITabBarItem!
+    @IBOutlet weak var emptyV:              UIView!
     
     // MARK: - Variables
+    private let CELL_NAME: String           = "DetailCell"
     private var currentLocation             = CLocation.locationInstance.getCurrentLocation()
     
     override func viewDidLoad() {
@@ -27,6 +31,7 @@ class HomeViewController: UIViewController {
         
         showCurrentAddress()
         showWeatherInformation()
+        showCurrentTourList()
     }
 
     // MARK: - Method
@@ -74,5 +79,41 @@ class HomeViewController: UIViewController {
         })
         
     }
+    private func showCurrentTourList() {
+        
+        let cellNib:    UINib = UINib(nibName: "DetailCell", bundle: nil)
+        tourListCV.register(cellNib, forCellWithReuseIdentifier: "DetailCell")
+        
+        let group:      DispatchGroup             = DispatchGroup()
+        let location:   CLocation.CurrentLocation = CLocation.locationInstance.getCurrentLocation()
+        
+        Tour.tourInstance.parserTourInformation(group: group, latitude: location.latitude, longitude: location.longitude)
+        
+        group.notify(queue: .main) { [unowned self] in
+            self.tourListCV.dataSource   = self
+            self.homeTabTBI.badgeValue   = "\(Tour.tourInstance.getTourInformation().count)"
+        }
+    }
 }
 
+// MARK: - UICollectionViewDataSource Extension
+extension HomeViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let count: Int = Tour.tourInstance.getTourInformation().count
+        self.emptyV.isHidden = count <= 0 ? false : true
+        return count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell: DetailCell = self.tourListCV.dequeueReusableCell(withReuseIdentifier: CELL_NAME, for: indexPath) as! DetailCell
+                
+        let inf = Tour.tourInstance.getTourInformation()[indexPath.row]
+        if let image: String = inf.imageURL.first {
+            cell.settingTourInformation(name: inf.name, summary: inf.address, keyword: inf.tel, image: image)
+        }
+        
+        return cell
+    }
+}

@@ -22,20 +22,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Jz-aL-dJR">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Jz-aL-dJR">
                                 <rect key="frame" x="123.66666666666669" y="124" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="baseline_shutter_speed_white_48pt_1x" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LeG-12-yjR">
                                         <rect key="frame" x="19.999999999999986" y="20" width="88" height="88"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="emJ-br-TS6"/>
+                                    <constraint firstAttribute="width" constant="128" id="fAT-9d-kbl"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AWj-6j-9pD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T3N-YI-opI"/>
+                            <constraint firstItem="2Jz-aL-dJR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Xeg-KX-Ys8"/>
+                            <constraint firstItem="2Jz-aL-dJR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bKR-A4-g46"/>
                             <constraint firstItem="AWj-6j-9pD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hXD-T6-YLn"/>
                             <constraint firstItem="AWj-6j-9pD" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="kBI-hI-B5x"/>
                             <constraint firstAttribute="bottom" secondItem="AWj-6j-9pD" secondAttribute="bottom" id="wvX-Xh-A1C"/>

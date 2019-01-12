@@ -77,7 +77,7 @@ public class Dust: NSObject {
                 
                 guard response.result.isSuccess else {
                     group.leave()
-                    return
+                    fatalError("❌ Error, Not Receive Data From Korea Meteorological Administration Server.")
                 }
                 
                 switch (response.response?.statusCode) {

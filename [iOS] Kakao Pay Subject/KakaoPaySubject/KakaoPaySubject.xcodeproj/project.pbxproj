@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C876B6E21EA27940029C134 /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C876B6D21EA27940029C134 /* Tour.swift */; };
 		0CF0DB3021E84A1D00B7C3CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0DB2F21E84A1D00B7C3CA /* AppDelegate.swift */; };
 		0CF0DB3221E84A1D00B7C3CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0DB3121E84A1D00B7C3CA /* HomeViewController.swift */; };
 		0CF0DB3421E84A1D00B7C3CA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0DB3321E84A1D00B7C3CA /* SettingViewController.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C876B6D21EA27940029C134 /* Tour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
 		0CF0DB2C21E84A1D00B7C3CA /* KakaoPaySubject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoPaySubject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CF0DB2F21E84A1D00B7C3CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CF0DB3121E84A1D00B7C3CA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C876B6C21EA22850029C134 /* Tour Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C876B6D21EA27940029C134 /* Tour.swift */,
+			);
+			path = "Tour Files";
+			sourceTree = "<group>";
+		};
 		0CF0DB2321E84A1C00B7C3CA = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 			children = (
 				0CF8766221E8A9BA00F40935 /* Key Files */,
 				0CF0DB6321E84A6C00B7C3CA /* Custome Degin Files */,
+				0C876B6C21EA22850029C134 /* Tour Files */,
 				0CF0DB6221E84A6200B7C3CA /* Weather Files */,
 				0CF0DB6121E84A5900B7C3CA /* Location Files */,
 				0CF0DB6021E84A4300B7C3CA /* StoryBoard Files */,
@@ -517,6 +528,7 @@
 				0CF8765B21E88A2400F40935 /* TriangleView.swift in Sources */,
 				0CF0DB3221E84A1D00B7C3CA /* HomeViewController.swift in Sources */,
 				0CF8766021E8A98400F40935 /* Dust.swift in Sources */,
+				0C876B6E21EA27940029C134 /* Tour.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
