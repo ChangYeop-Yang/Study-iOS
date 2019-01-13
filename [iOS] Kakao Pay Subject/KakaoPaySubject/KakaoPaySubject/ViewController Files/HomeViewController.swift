@@ -9,21 +9,27 @@
 import UIKit
 import SwiftSpinner
 
+// MARK: - Protocol
+public protocol Transmit: class {
+    func transmitData(parameter: String)
+}
+
 class HomeViewController: UIViewController {
     
     // MARK: - Outlet Variables
-    @IBOutlet weak var wallPaperIMG:        UIImageView!
-    @IBOutlet weak var weatherLogoIMG:      CircleImageView!
-    @IBOutlet weak var weatherStateLB:      UILabel!
-    @IBOutlet weak var visualityStateLB:    UILabel!
-    @IBOutlet weak var humidityStateLB:     UILabel!
-    @IBOutlet weak var dustStateLB:         UILabel!
-    @IBOutlet weak var addressLB:           UILabel!
-    @IBOutlet weak var tourListCV:          UICollectionView!
-    @IBOutlet weak var homeTabTBI:          UITabBarItem!
-    @IBOutlet weak var emptyV:              UIView!
+    @IBOutlet private weak var wallPaperIMG:        UIImageView!
+    @IBOutlet private weak var weatherLogoIMG:      CircleImageView!
+    @IBOutlet private weak var weatherStateLB:      UILabel!
+    @IBOutlet private weak var visualityStateLB:    UILabel!
+    @IBOutlet private weak var humidityStateLB:     UILabel!
+    @IBOutlet private weak var dustStateLB:         UILabel!
+    @IBOutlet private weak var addressLB:           UILabel!
+    @IBOutlet private weak var tourListCV:          UICollectionView!
+    @IBOutlet private weak var homeTabTBI:          UITabBarItem!
+    @IBOutlet private weak var emptyV:              UIView!
     
     // MARK: - Variables
+    public var delegate: Transmit?
     private let CELL_NAME: String           = "DetailCell"
     private var currentLocation             = CLocation.locationInstance.getCurrentLocation()
     
@@ -35,7 +41,6 @@ class HomeViewController: UIViewController {
         showCurrentAddress()
         showWeatherInformation()
         showCurrentTourList()
-        WebTour.webTourInstance.parserWebTour()
     }
 
     // MARK: - Method
@@ -94,6 +99,7 @@ class HomeViewController: UIViewController {
         Tour.tourInstance.parserTourInformation(group: group, latitude: location.latitude, longitude: location.longitude)
         
         group.notify(queue: .main) { [unowned self] in
+            self.tourListCV.delegate     = self
             self.tourListCV.dataSource   = self
             self.homeTabTBI.badgeValue   = "\(Tour.tourInstance.getTourInformation().count)"
             
@@ -121,5 +127,20 @@ extension HomeViewController: UICollectionViewDataSource {
         }
         
         return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegate Extension
+extension HomeViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard let nextController = UIStoryboard(name: "Detail", bundle: nil).instantiateInitialViewController() else {
+            fatalError("❌ Error, could not load UIStoryBoard.")
+        }
+        
+        self.present(nextController, animated: true) { [unowned self] in
+            self.delegate?.transmitData(parameter: Tour.tourInstance.getTourInformation()[indexPath.row].name)
+        }
     }
 }
