@@ -24,21 +24,7 @@ class DetailCell: UICollectionViewCell {
             self.tourNameLB.text          = name
             self.tourSummaryLB.text       = summary
             self.tourKeywordLB.text       = keyword
-            
-            guard let url: URL = URL(string: image) else {
-                fatalError("❌ Error, could not connect image from server.")
-            }
-            Alamofire.request(url).responseData { response in
-                
-                guard let imageData: Data = response.data else {
-                    fatalError("❌ Error, could not download image from server.")
-                }
-                self.tourIMG.image        = UIImage(data: imageData)
-            }
+            self.tourIMG.downloadImage(link: image)
         }
-    }
-    
-    // MARK - Action Method
-    @IBAction func showDetailAlert(_ sender: UIButton) {
     }
 }

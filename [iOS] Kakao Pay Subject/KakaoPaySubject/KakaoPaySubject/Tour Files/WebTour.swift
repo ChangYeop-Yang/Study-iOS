@@ -8,6 +8,11 @@
 
 import Alamofire
 
+// MARK: - Protocol
+public protocol Transmit: class {
+    func transmitData(parameter: String)
+}
+
 class WebTour: NSObject {
     
     // MARK: - Enum
@@ -33,6 +38,7 @@ class WebTour: NSObject {
     }
     
     // MARK: - Variables
+    public var delegate: Transmit?
     private let header = ["Authorization": "KakaoAK \(KAKAO_SEARCH_API_KEY)"]
     private var webTextInformationList:     [WebTextINF]    = []
     private var webImageInformationList:    [WebImageINF]   = []
@@ -71,6 +77,8 @@ class WebTour: NSObject {
     public func parserTextWebTour(group: DispatchGroup, query: String) {
         
         group.enter()
+        self.webTextInformationList.removeAll()
+        
         Alamofire.request("https://dapi.kakao.com/v2/search/web", method: .get, parameters: ["query": query], encoding: URLEncoding.default, headers: header).responseJSON { [unowned self] response in
             
             guard response.result.isSuccess else {
@@ -105,6 +113,7 @@ class WebTour: NSObject {
     public func parserImageWebTour(group: DispatchGroup, query: String) {
         
         group.enter()
+        self.webImageInformationList.removeAll()
         
         Alamofire.request("https://dapi.kakao.com/v2/search/image", method: .get, parameters: ["query": query], encoding: URLEncoding.default, headers: header).responseJSON { [unowned self] response in
             

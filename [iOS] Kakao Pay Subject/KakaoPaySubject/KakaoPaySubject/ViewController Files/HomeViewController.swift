@@ -9,11 +9,6 @@
 import UIKit
 import SwiftSpinner
 
-// MARK: - Protocol
-public protocol Transmit: class {
-    func transmitData(parameter: String)
-}
-
 class HomeViewController: UIViewController {
     
     // MARK: - Outlet Variables
@@ -29,7 +24,6 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var emptyV:              UIView!
     
     // MARK: - Variables
-    public var delegate: Transmit?
     private let CELL_NAME: String           = "DetailCell"
     private var currentLocation             = CLocation.locationInstance.getCurrentLocation()
     
@@ -140,7 +134,8 @@ extension HomeViewController: UICollectionViewDelegate {
         }
         
         self.present(nextController, animated: true) { [unowned self] in
-            self.delegate?.transmitData(parameter: Tour.tourInstance.getTourInformation()[indexPath.row].name)
+            SwiftSpinner.show("Just a moment", animated: true)
+            WebTour.webTourInstance.delegate?.transmitData(parameter: Tour.tourInstance.getTourInformation()[indexPath.row].name)
         }
     }
 }

@@ -31,9 +31,6 @@
                                             <constraint firstAttribute="width" constant="24" id="MoO-UN-MT5"/>
                                         </constraints>
                                         <state key="normal" image="baseline_keyboard_arrow_right_black_18pt_1x"/>
-                                        <connections>
-                                            <action selector="showDetailAlert:" destination="O61-Kj-nqJ" eventType="touchUpInside" id="yE2-Dv-giz"/>
-                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="A5W-Bm-VfZ">
                                         <rect key="frame" x="84" y="0.0" width="282" height="90"/>
