@@ -213,9 +213,9 @@
 			children = (
 				0CF0DB3521E84A1D00B7C3CA /* Main.storyboard */,
 				0CF0DB6C21E84B8F00B7C3CA /* Home.storyboard */,
+				0CF10F4821EB4E110015DD8B /* Detail.storyboard */,
 				0CF0DB6E21E84BD800B7C3CA /* Setting.storyboard */,
 				0CF8765C21E8912F00F40935 /* Connect.storyboard */,
-				0CF10F4821EB4E110015DD8B /* Detail.storyboard */,
 			);
 			path = "StoryBoard Files";
 			sourceTree = "<group>";
