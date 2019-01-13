@@ -133,7 +133,7 @@ extension HomeViewController: UICollectionViewDelegate {
             fatalError("❌ Error, could not load UIStoryBoard.")
         }
         
-        self.present(nextController, animated: true) { [unowned self] in
+        self.present(nextController, animated: true) {
             SwiftSpinner.show("Just a moment", animated: true)
             WebTour.webTourInstance.delegate?.transmitData(parameter: Tour.tourInstance.getTourInformation()[indexPath.row].name)
         }

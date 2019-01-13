@@ -12,36 +12,29 @@ import SwiftSpinner
 
 class DetailViewController: UIViewController {
     
+    // MARK: - Enum
+    private enum IndexBT: Int {
+        case Next       = 200
+        case Privious   = 100
+    }
+    
     // MARK: - Variables
+    private var index: Int = 0
     
     // MARK: - Outlet Variables
     @IBOutlet private weak var titleLB:     UILabel!
     @IBOutlet private weak var tourIMG:     UIImageView!
     @IBOutlet private weak var webTourTB:   UITableView!
-    @IBOutlet private weak var tourMapV:    MKMapView!
+    @IBOutlet weak var priviousBT: UIButton!
+    @IBOutlet weak var nextBT: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        showCurrentTourMapPoint()
         WebTour.webTourInstance.delegate = self
     }
     
     // MARK: - Method
-    private func showCurrentTourMapPoint() {
-        
-        // Move to Current Coordinate.
-        let location = CLocation.locationInstance.getCurrentLocation()
-        let center   = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-        let span     = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-        self.tourMapV.setRegion(MKCoordinateRegion(center: center, span: span), animated: false)
-        
-        // Create Marker at Current Coordinate.
-        let marker        = MKPointAnnotation()
-        marker.coordinate = center
-        marker.title      = "HERE"
-        self.tourMapV.addAnnotation(marker)
-    }
     private func showTourInformation(parameter: String) {
         
         let groupWebImage: DispatchGroup = DispatchGroup()
@@ -51,6 +44,7 @@ class DetailViewController: UIViewController {
             guard let imageURL = WebTour.webTourInstance.getWebImageInformation().first else {
                 return
             }
+            self.priviousBT.isEnabled = false
             self.tourIMG.downloadImage(link: imageURL.image)
         }
         
@@ -70,6 +64,25 @@ class DetailViewController: UIViewController {
     @IBAction private func closeViewController(_ sender: UIButton) {
         vibrateDevice()
         self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func changePhoto(_ sender: UIButton) {
+        vibrateDevice()
+        
+        guard let indexBT: IndexBT = IndexBT(rawValue: sender.tag) else {
+            return
+        }
+        
+        let inf = WebTour.webTourInstance.getWebImageInformation()
+        switch indexBT {
+            case .Next:
+                self.index += 1
+                if inf.count < self.index { self.nextBT.isEnabled = false }
+                else { self.tourIMG.downloadImage(link: inf[self.index].image); self.priviousBT.isEnabled = true; }
+            case .Privious:
+                self.index -= 1
+                if self.index <= 0 { self.priviousBT.isEnabled = false }
+                else { self.tourIMG.downloadImage(link: inf[self.index].image); self.nextBT.isEnabled = true; }
+        }
     }
 }
 
@@ -106,6 +119,6 @@ extension DetailViewController: UITableViewDataSource {
 extension DetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        
     }
 }

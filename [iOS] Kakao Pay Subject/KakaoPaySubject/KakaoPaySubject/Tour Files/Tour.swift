@@ -41,20 +41,19 @@ class Tour: NSObject {
     // MARK: - Method
     private func extractTourInformation(parser: [String: Any]) -> TourINF {
         
-        let parserKeys:  [String] = ["title", "tel", "dist", "addr1", "firstimage"]
         let containKeys           = parser.keys
         
         var information: TourINF = TourINF()
-        for key in parserKeys where containKeys.contains(key) {
+        for key in containKeys where containKeys.contains(key) {
             
             guard let tourKey: TourCase = TourCase(rawValue: key) else {
                 continue
             }
             switch tourKey {
-                case .Title: information.name       = parser[key] as! String
-                case .Tel:   information.tel        = parser[key] as! String
-                case .Dist:  information.distance   = parser[key] as! Int
-                case .Addr:  information.address    = parser[key] as! String
+                case .Title: information.name           = parser[key] as! String
+                case .Tel:   information.tel            = parser[key] as! String
+                case .Dist:  information.distance       = parser[key] as! Int
+                case .Addr:  information.address        = parser[key] as! String
                 case .Image: information.imageURL.append(parser[key] as! String)
             }
         }
