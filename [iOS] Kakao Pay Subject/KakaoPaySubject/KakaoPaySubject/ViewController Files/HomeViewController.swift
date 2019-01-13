@@ -35,6 +35,7 @@ class HomeViewController: UIViewController {
         showCurrentAddress()
         showWeatherInformation()
         showCurrentTourList()
+        WebTour.webTourInstance.parserWebTour()
     }
 
     // MARK: - Method

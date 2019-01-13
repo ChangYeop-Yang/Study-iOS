@@ -10,7 +10,7 @@
 		0C876B6E21EA27940029C134 /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C876B6D21EA27940029C134 /* Tour.swift */; };
 		0CF0DB3021E84A1D00B7C3CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0DB2F21E84A1D00B7C3CA /* AppDelegate.swift */; };
 		0CF0DB3221E84A1D00B7C3CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0DB3121E84A1D00B7C3CA /* HomeViewController.swift */; };
-		0CF0DB3421E84A1D00B7C3CA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0DB3321E84A1D00B7C3CA /* SettingViewController.swift */; };
+		0CF0DB3421E84A1D00B7C3CA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0DB3321E84A1D00B7C3CA /* DetailViewController.swift */; };
 		0CF0DB3721E84A1D00B7C3CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CF0DB3521E84A1D00B7C3CA /* Main.storyboard */; };
 		0CF0DB3921E84A1F00B7C3CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF0DB3821E84A1F00B7C3CA /* Assets.xcassets */; };
 		0CF0DB3C21E84A1F00B7C3CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CF0DB3A21E84A1F00B7C3CA /* LaunchScreen.storyboard */; };
@@ -21,6 +21,8 @@
 		0CF0DB6D21E84B8F00B7C3CA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CF0DB6C21E84B8F00B7C3CA /* Home.storyboard */; };
 		0CF0DB6F21E84BD800B7C3CA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CF0DB6E21E84BD800B7C3CA /* Setting.storyboard */; };
 		0CF0DB7121E84C2F00B7C3CA /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0DB7021E84C2F00B7C3CA /* ConnectViewController.swift */; };
+		0CF10F4921EB4E110015DD8B /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CF10F4821EB4E110015DD8B /* Detail.storyboard */; };
+		0CF1D19821EA5E1B00D13FE1 /* WebTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF1D19721EA5E1B00D13FE1 /* WebTour.swift */; };
 		0CF8765621E8841800F40935 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF8765421E8841600F40935 /* CircleImageView.swift */; };
 		0CF8765721E8841800F40935 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF8765521E8841700F40935 /* CardView.swift */; };
 		0CF8765921E8847200F40935 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF8765821E8847200F40935 /* RoundView.swift */; };
@@ -59,7 +61,7 @@
 		0CF0DB2C21E84A1D00B7C3CA /* KakaoPaySubject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoPaySubject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CF0DB2F21E84A1D00B7C3CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CF0DB3121E84A1D00B7C3CA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0CF0DB3321E84A1D00B7C3CA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		0CF0DB3321E84A1D00B7C3CA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0CF0DB3621E84A1D00B7C3CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0CF0DB3821E84A1F00B7C3CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CF0DB3B21E84A1F00B7C3CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,8 @@
 		0CF0DB6C21E84B8F00B7C3CA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		0CF0DB6E21E84BD800B7C3CA /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		0CF0DB7021E84C2F00B7C3CA /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
+		0CF10F4821EB4E110015DD8B /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		0CF1D19721EA5E1B00D13FE1 /* WebTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebTour.swift; sourceTree = "<group>"; };
 		0CF8765421E8841600F40935 /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		0CF8765521E8841700F40935 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0CF8765821E8847200F40935 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				0C876B6D21EA27940029C134 /* Tour.swift */,
+				0CF1D19721EA5E1B00D13FE1 /* WebTour.swift */,
 			);
 			path = "Tour Files";
 			sourceTree = "<group>";
@@ -198,7 +203,7 @@
 				0CF0DB6621E84B2D00B7C3CA /* Xib Files */,
 				0CF0DB7021E84C2F00B7C3CA /* ConnectViewController.swift */,
 				0CF0DB3121E84A1D00B7C3CA /* HomeViewController.swift */,
-				0CF0DB3321E84A1D00B7C3CA /* SettingViewController.swift */,
+				0CF0DB3321E84A1D00B7C3CA /* DetailViewController.swift */,
 			);
 			path = "ViewController Files";
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				0CF0DB6C21E84B8F00B7C3CA /* Home.storyboard */,
 				0CF0DB6E21E84BD800B7C3CA /* Setting.storyboard */,
 				0CF8765C21E8912F00F40935 /* Connect.storyboard */,
+				0CF10F4821EB4E110015DD8B /* Detail.storyboard */,
 			);
 			path = "StoryBoard Files";
 			sourceTree = "<group>";
@@ -410,6 +416,7 @@
 				0CF0DB3C21E84A1F00B7C3CA /* LaunchScreen.storyboard in Resources */,
 				0CF8765D21E8912F00F40935 /* Connect.storyboard in Resources */,
 				0CF0DB6D21E84B8F00B7C3CA /* Home.storyboard in Resources */,
+				0CF10F4921EB4E110015DD8B /* Detail.storyboard in Resources */,
 				0CF0DB3921E84A1F00B7C3CA /* Assets.xcassets in Resources */,
 				0CF0DB6B21E84B6900B7C3CA /* DetailCell.xib in Resources */,
 				0CF0DB3721E84A1D00B7C3CA /* Main.storyboard in Resources */,
@@ -517,8 +524,9 @@
 			files = (
 				0CF8765721E8841800F40935 /* CardView.swift in Sources */,
 				0CF8766B21E8BBE900F40935 /* Common.swift in Sources */,
+				0CF1D19821EA5E1B00D13FE1 /* WebTour.swift in Sources */,
 				0CF0DB7121E84C2F00B7C3CA /* ConnectViewController.swift in Sources */,
-				0CF0DB3421E84A1D00B7C3CA /* SettingViewController.swift in Sources */,
+				0CF0DB3421E84A1D00B7C3CA /* DetailViewController.swift in Sources */,
 				0CF8766121E8A98400F40935 /* Weather.swift in Sources */,
 				0CF0DB3021E84A1D00B7C3CA /* AppDelegate.swift in Sources */,
 				0CF0DB6A21E84B6900B7C3CA /* DetailCell.swift in Sources */,
