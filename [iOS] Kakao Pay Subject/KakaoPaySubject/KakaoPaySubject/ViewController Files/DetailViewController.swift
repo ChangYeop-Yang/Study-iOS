@@ -25,8 +25,10 @@ class DetailViewController: UIViewController {
     @IBOutlet private weak var titleLB:     UILabel!
     @IBOutlet private weak var tourIMG:     UIImageView!
     @IBOutlet private weak var webTourTB:   UITableView!
-    @IBOutlet weak var priviousBT: UIButton!
-    @IBOutlet weak var nextBT: UIButton!
+    @IBOutlet private weak var priviousBT: UIButton!
+    @IBOutlet private weak var nextBT: UIButton!
+    @IBOutlet private weak var notFoundIMG: UIImageView!
+    @IBOutlet private weak var displayLB: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +44,12 @@ class DetailViewController: UIViewController {
         
         groupWebImage.notify(queue: .main) { [unowned self] in
             guard let imageURL = WebTour.webTourInstance.getWebImageInformation().first else {
+                self.nextBT.isEnabled       = true
+                self.priviousBT.isEnabled   = true
                 return
             }
             self.priviousBT.isEnabled = false
+            self.displayLB.text = imageURL.display
             self.tourIMG.downloadImage(link: imageURL.image)
         }
         
@@ -65,7 +70,7 @@ class DetailViewController: UIViewController {
         vibrateDevice()
         self.dismiss(animated: true, completion: nil)
     }
-    @IBAction func changePhoto(_ sender: UIButton) {
+    @IBAction private func changePhoto(_ sender: UIButton) {
         vibrateDevice()
         
         guard let indexBT: IndexBT = IndexBT(rawValue: sender.tag) else {
@@ -77,11 +82,19 @@ class DetailViewController: UIViewController {
             case .Next:
                 self.index += 1
                 if inf.count < self.index { self.nextBT.isEnabled = false }
-                else { self.tourIMG.downloadImage(link: inf[self.index].image); self.priviousBT.isEnabled = true; }
+                else {
+                    self.priviousBT.isEnabled = true
+                    self.displayLB.text = inf[self.index].display
+                    self.tourIMG.downloadImage(link: inf[self.index].image)
+                }
             case .Privious:
                 self.index -= 1
                 if self.index <= 0 { self.priviousBT.isEnabled = false }
-                else { self.tourIMG.downloadImage(link: inf[self.index].image); self.nextBT.isEnabled = true; }
+                else {
+                    self.nextBT.isEnabled = true
+                    self.displayLB.text = inf[self.index].display
+                    self.tourIMG.downloadImage(link: inf[self.index].image)
+                }
         }
     }
 }
@@ -98,27 +111,35 @@ extension DetailViewController: Transmit {
 extension DetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return WebTour.webTourInstance.getWebTextInformation().count
+        let count: Int = WebTour.webTourInstance.getWebTextInformation().count
+        self.notFoundIMG.isHidden = count > 0 ? true : false
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let inf = WebTour.webTourInstance.getWebTextInformation()
         let cell = tableView.dequeueReusableCell(withIdentifier: "WebSubCell") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "WebSubCell")
-    
-        let data: Data = Data(inf[indexPath.row].title.utf8)
-        if let attrString: NSAttributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
-            cell.textLabel?.attributedText = attrString
+        
+        cell.textLabel?.attributedText = NSAttributedString(html: inf[indexPath.row].title)
+        if let date = inf[indexPath.row].date.split(separator: "T").first {
+            cell.detailTextLabel?.text = String(date)
         }
-        cell.detailTextLabel?.text = inf[indexPath.row].date
         
         return cell
     }
 }
 
+// MARK: - UITableViewDelegate Extension
 extension DetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let inf = WebTour.webTourInstance.getWebTextInformation()
+        guard let link: URL = URL(string: inf[indexPath.row].url) else {
+            return
+        }
+
+        UIApplication.shared.open(link, options: [:], completionHandler: nil)
     }
 }
