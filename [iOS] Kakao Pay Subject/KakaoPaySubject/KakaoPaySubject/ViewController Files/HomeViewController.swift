@@ -30,18 +30,25 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SwiftSpinner.show("Just a moment", animated: true)
-        
         showCurrentAddress()
         showWeatherInformation()
         showCurrentTourList()
+        settingLongPressGesture(duration: 0.5, target: self.tourListCV)
     }
 
     // MARK: - Method
+    private func settingLongPressGesture(duration: Double, target: UICollectionView) {
+        
+        let gesture = UILongPressGestureRecognizer(target: self, action: #selector(showMapActionSheet(gesture:)))
+        gesture.minimumPressDuration = duration
+        gesture.delaysTouchesBegan = true
+        target.addGestureRecognizer(gesture)
+    }
     private func showWeatherInformation() {
         
-        let group: DispatchGroup = DispatchGroup()
+        SwiftSpinner.show("Just a moment", animated: true)
         
+        let group: DispatchGroup = DispatchGroup()
         Weather.weatherInstance.receiveWeatherData(group: group, language: "ko", latitude: self.currentLocation.latitude, longtitude: self.currentLocation.longitude)
         
         group.notify(queue: .main, execute: { [unowned self] in
@@ -98,6 +105,23 @@ class HomeViewController: UIViewController {
             self.homeTabTBI.badgeValue   = "\(Tour.tourInstance.getTourInformation().count)"
             
             SwiftSpinner.hide()
+        }
+    }
+    @objc private func showMapActionSheet(gesture : UILongPressGestureRecognizer) {
+     
+        switch gesture.state {
+            case .ended :
+                
+                let location    = gesture.location(in: self.tourListCV)
+                guard let index = self.tourListCV.indexPathForItem(at: location) else {
+                        return
+                }
+            
+                let test = Tour.tourInstance.getTourInformation()[index.row].location
+            
+                
+            
+            default: return
         }
     }
 }

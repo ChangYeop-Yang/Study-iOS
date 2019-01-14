@@ -29,14 +29,14 @@
                                         </constraints>
                                     </imageView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pew-Wz-Kb6">
-                                        <rect key="frame" x="0.0" y="181" width="375" height="591"/>
+                                        <rect key="frame" x="0.0" y="94" width="375" height="591"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <segue destination="ag3-j2-n5B" kind="embed" id="UVu-Gw-KJU"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.93681472539901733" green="0.93847984075546265" blue="0.95513194799423218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="vou-oY-HM0" firstAttribute="centerX" secondItem="Xvj-Ma-PkT" secondAttribute="centerX" id="B8s-9N-Rve"/>
                                     <constraint firstAttribute="bottom" secondItem="pew-Wz-Kb6" secondAttribute="bottom" id="EvC-xj-Gum"/>
@@ -47,7 +47,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.93681472539999999" green="0.93847984080000002" blue="0.95513194800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="koy-bm-szl" firstAttribute="bottom" secondItem="Xvj-Ma-PkT" secondAttribute="bottom" id="HZD-DS-JRQ"/>
                             <constraint firstItem="Xvj-Ma-PkT" firstAttribute="top" secondItem="koy-bm-szl" secondAttribute="top" id="Ozp-Fo-01s"/>
@@ -67,32 +67,148 @@
         <scene sceneID="Bk5-4Y-FSh">
             <objects>
                 <tableViewController id="ag3-j2-n5B" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Kkc-y4-0xp">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="static" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Kkc-y4-0xp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
-                            <tableViewSection headerTitle="OPEN SOURCE LIST" id="hwo-J5-pYD">
+                            <tableViewSection headerTitle="REST API LIST" id="D97-Be-gpH">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" textLabel="MJw-So-Xum" detailTextLabel="op3-kr-fjy" imageView="4Ah-At-aLu" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Dbu-lk-Q80">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="1ps-Nv-fXA" detailTextLabel="WQl-XV-VmU" imageView="7Js-mX-bNR" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Ao5-TL-svr">
                                         <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ao5-TL-svr" id="P6L-wr-OMQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Kakao Search Platform" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1ps-Nv-fXA">
+                                                    <rect key="frame" x="85" y="1.3333333333333339" width="156" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Copyrightⓒ All Rights Reserved Kakao Developer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WQl-XV-VmU">
+                                                    <rect key="frame" x="85.000000000000014" y="21.999999999999996" width="197.33333333333334" height="33.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="baseline_http_black_18pt_1x" id="7Js-mX-bNR">
+                                                    <rect key="frame" x="16" y="2" width="54" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vcr-ny-JxQ" detailTextLabel="DJY-fA-ep9" imageView="l4W-ME-HXx" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Ote-3b-5aO">
+                                        <rect key="frame" x="0.0" y="115.33333333333334" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ote-3b-5aO" id="fkO-z6-15R">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="국내 관광정보 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vcr-ny-JxQ">
+                                                    <rect key="frame" x="85" y="1.3333333333333339" width="125" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Copyrightⓒ All Rights Reserved 공공데이터포털" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DJY-fA-ep9">
+                                                    <rect key="frame" x="85.000000000000014" y="21.999999999999996" width="253.33333333333334" height="33.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="baseline_http_black_18pt_1x" id="l4W-ME-HXx">
+                                                    <rect key="frame" x="16" y="2" width="54" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="nHf-X5-3kh" detailTextLabel="zkH-7a-xjJ" imageView="hiH-D3-F3e" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="TX6-Rg-ZPX">
+                                        <rect key="frame" x="0.0" y="175.33333333333334" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TX6-Rg-ZPX" id="yi5-RA-Vyg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="동네 예보정보 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nHf-X5-3kh">
+                                                    <rect key="frame" x="85" y="1.3333333333333339" width="125" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Copyrightⓒ All Rights Reserved 공공데이터포털" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zkH-7a-xjJ">
+                                                    <rect key="frame" x="85.000000000000014" y="21.999999999999996" width="253.33333333333334" height="33.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="baseline_http_black_18pt_1x" id="hiH-D3-F3e">
+                                                    <rect key="frame" x="16" y="2" width="54" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fqh-Ue-OZQ" detailTextLabel="nWM-lS-Jfs" imageView="bzQ-EH-HVZ" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="hxV-ET-TeC">
+                                        <rect key="frame" x="0.0" y="235.33333333333337" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hxV-ET-TeC" id="AHa-hs-APo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="환경 공단 대기오염 정보 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fqh-Ue-OZQ">
+                                                    <rect key="frame" x="85" y="1.3333333333333339" width="185" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Copyrightⓒ All Rights Reserved 공공데이터포털" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nWM-lS-Jfs">
+                                                    <rect key="frame" x="85.000000000000014" y="21.999999999999996" width="253.33333333333334" height="33.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="baseline_http_black_18pt_1x" id="bzQ-EH-HVZ">
+                                                    <rect key="frame" x="16" y="2" width="54" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="OPEN SOURCE LIST" id="hwo-J5-pYD">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="MJw-So-Xum" detailTextLabel="op3-kr-fjy" imageView="4Ah-At-aLu" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Dbu-lk-Q80">
+                                        <rect key="frame" x="0.0" y="351.33333333333337" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dbu-lk-Q80" id="kBq-Zr-EE9">
-                                            <rect key="frame" x="0.0" y="0.0" width="307" height="59.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Alamofire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MJw-So-Xum">
-                                                    <rect key="frame" x="85" y="3" width="73" height="20.333333333333332"/>
+                                                    <rect key="frame" x="85" y="9.9999999999999982" width="73" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Copyrightⓒ All Rights Reserved Alamofire" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="op3-kr-fjy">
-                                                    <rect key="frame" x="85" y="26.333333333333329" width="128" height="28.666666666666668"/>
+                                                    <rect key="frame" x="85" y="33.333333333333329" width="238" height="14.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -106,22 +222,22 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" textLabel="Plj-9Y-AA1" detailTextLabel="Mfw-E9-C5J" imageView="zUG-se-VYj" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="dFf-ro-gNl">
-                                        <rect key="frame" x="0.0" y="115.33333333333334" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="Plj-9Y-AA1" detailTextLabel="Mfw-E9-C5J" imageView="zUG-se-VYj" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="dFf-ro-gNl">
+                                        <rect key="frame" x="0.0" y="411.33333333333337" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dFf-ro-gNl" id="Qfo-LI-kkn">
-                                            <rect key="frame" x="0.0" y="0.0" width="307" height="59.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="SwiftSpinner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Plj-9Y-AA1">
-                                                    <rect key="frame" x="85" y="3" width="97.333333333333329" height="20.333333333333332"/>
+                                                    <rect key="frame" x="85" y="9.9999999999999982" width="97.333333333333329" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Copyrightⓒ All Rights Reserved SwiftSpinner" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mfw-E9-C5J">
-                                                    <rect key="frame" x="85.000000000000014" y="26.333333333333329" width="184.33333333333334" height="28.666666666666668"/>
+                                                    <rect key="frame" x="85" y="33.333333333333329" width="256" height="14.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -139,8 +255,8 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="DEVELOPER INFORMATION" id="02j-bj-XRu">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Oai-4M-wDx" detailTextLabel="K9u-ed-t0j" imageView="GBg-ex-yzf" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="NZQ-Wo-UkJ">
-                                        <rect key="frame" x="0.0" y="231.33333333333337" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="Oai-4M-wDx" detailTextLabel="K9u-ed-t0j" imageView="GBg-ex-yzf" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="NZQ-Wo-UkJ">
+                                        <rect key="frame" x="0.0" y="527.33333333333337" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NZQ-Wo-UkJ" id="0vm-wy-WWh">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
@@ -153,8 +269,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="경북대학교 IT대학 컴퓨터학부" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K9u-ed-t0j">
-                                                    <rect key="frame" x="85.000000000000014" y="33.333333333333329" width="142.33333333333334" height="14.333333333333334"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="경북대학교 IT대학 컴퓨터학부 심화컴퓨터전공" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K9u-ed-t0j">
+                                                    <rect key="frame" x="85.000000000000014" y="33.333333333333329" width="218.33333333333334" height="14.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -183,6 +299,7 @@
     </scenes>
     <resources>
         <image name="baseline_code_black_18pt_1x" width="54" height="54"/>
+        <image name="baseline_http_black_18pt_1x" width="54" height="54"/>
         <image name="baseline_settings_black_48pt_1x" width="144" height="144"/>
         <image name="baseline_settings_white_24pt_1x" width="72" height="72"/>
         <image name="baseline_web_black_18pt_1x" width="54" height="54"/>

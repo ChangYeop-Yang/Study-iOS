@@ -17,18 +17,21 @@ class Tour: NSObject {
         case Dist  = "dist"
         case Addr  = "addr1"
         case Image = "firstimage"
+        case MapY  = "mapy"
+        case MapX  = "mapx"
     }
     
     // MARK: - Structure
     public struct TourINF {
         // String
-        var name:       String   = "❌ 이름 없음"
-        var address:    String   = "❌ 주소 없음"
-        var tel:        String   = "❌ 전화번호 없음"
-        var imageURL:   [String] = []
+        var name:       String                      = "❌ 이름 없음"
+        var address:    String                      = "❌ 주소 없음"
+        var tel:        String                      = "❌ 전화번호 없음"
+        var imageURL:   [String]                    = []
+        var location:   (lat: String, long: String) = ("0.0", "0.0")
         
         // Integer
-        var distance:   Int   = 0
+        var distance:   Int                         = 0
     }
     
     // MARK: - Variables
@@ -49,11 +52,14 @@ class Tour: NSObject {
             guard let tourKey: TourCase = TourCase(rawValue: key) else {
                 continue
             }
+            
             switch tourKey {
                 case .Title: information.name           = parser[key] as! String
                 case .Tel:   information.tel            = parser[key] as! String
                 case .Dist:  information.distance       = parser[key] as! Int
                 case .Addr:  information.address        = parser[key] as! String
+                case .MapX:  information.location.long  = String(describing: parser[key]!)
+                case .MapY:  information.location.lat   = String(describing: parser[key]!)
                 case .Image: information.imageURL.append(parser[key] as! String)
             }
         }
