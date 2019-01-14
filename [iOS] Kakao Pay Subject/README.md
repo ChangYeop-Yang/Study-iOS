@@ -2,7 +2,7 @@
 
 :floppy_disk: [Download - 2019 Kakao Pay Client Zip File](https://github.com/ChangYeop-Yang/Study-iOS/files/2754882/iOS.Kakao.Pay.Subject.zip)
 
-* Simulator를 통하여 Application을 실행하시는 경우에는 **국내 임의 좌표 (Example: 37.394063, 127.110112)**을 이용해주시고 **Simulator Device 언어 환경은 한국어**로 변경 후 실행시켜주세요 :exclamation::exclamation::exclamation: 
+* Simulator를 통하여 Application을 실행하시는 경우에는 **국내 임의 좌표 (Example: 37.394063, 127.110112)** 을 이용해주시고 **Simulator Device 언어 환경은 한국어**로 변경 후 실행시켜주세요 :exclamation::exclamation::exclamation: 
 
 ## ★ Application Development Environment
 
