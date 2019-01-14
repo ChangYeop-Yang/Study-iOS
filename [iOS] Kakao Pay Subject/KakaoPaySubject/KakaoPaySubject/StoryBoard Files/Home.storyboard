@@ -162,6 +162,71 @@
                                             <constraint firstItem="ud9-Ky-VCD" firstAttribute="centerX" secondItem="UYw-pg-e6J" secondAttribute="centerX" id="lXO-tD-fIb"/>
                                         </constraints>
                                     </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eT3-eW-cdA" customClass="CardView" customModule="KakaoPaySubject" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="559" width="355" height="160"/>
+                                        <subviews>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wGv-iu-f7l">
+                                                <rect key="frame" x="0.0" y="32" width="355" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="KmN-bF-C8m"/>
+                                                </constraints>
+                                            </mapView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6P-im-i4a">
+                                                <rect key="frame" x="5" y="5" width="345" height="22"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🗾 MAP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2K5-rw-Zg5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64.666666666666671" height="22"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNg-AM-38b">
+                                                        <rect key="frame" x="69.666666666666657" y="0.0" width="259.33333333333337" height="22"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfc-MC-xSo">
+                                                        <rect key="frame" x="329" y="0.0" width="16" height="22"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="16" id="CI5-qN-a8t"/>
+                                                        </constraints>
+                                                        <state key="normal" image="baseline_clear_black_18pt_1x">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="closeMapView:" destination="vkI-Np-gBN" eventType="touchUpInside" id="SS2-bl-IXs"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="uNg-AM-38b" firstAttribute="top" secondItem="M6P-im-i4a" secondAttribute="top" id="G1E-z0-i9W"/>
+                                                    <constraint firstItem="2K5-rw-Zg5" firstAttribute="leading" secondItem="M6P-im-i4a" secondAttribute="leading" id="RKz-Hm-Miv"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Xfc-MC-xSo" secondAttribute="bottom" id="aYx-Iy-dep"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Xfc-MC-xSo" secondAttribute="trailing" id="c7M-DM-FUl"/>
+                                                    <constraint firstItem="Xfc-MC-xSo" firstAttribute="top" secondItem="M6P-im-i4a" secondAttribute="top" id="hRi-QW-Fa2"/>
+                                                    <constraint firstItem="uNg-AM-38b" firstAttribute="leading" secondItem="2K5-rw-Zg5" secondAttribute="trailing" constant="5" id="i3w-2s-s6S"/>
+                                                    <constraint firstAttribute="bottom" secondItem="uNg-AM-38b" secondAttribute="bottom" id="jeK-HW-6Cm"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2K5-rw-Zg5" secondAttribute="bottom" id="phv-zs-6dv"/>
+                                                    <constraint firstItem="Xfc-MC-xSo" firstAttribute="leading" secondItem="uNg-AM-38b" secondAttribute="trailing" id="qov-br-ZAx"/>
+                                                    <constraint firstItem="2K5-rw-Zg5" firstAttribute="top" secondItem="M6P-im-i4a" secondAttribute="top" id="tDq-RK-T5w"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="wGv-iu-f7l" secondAttribute="bottom" id="EZq-SC-B9v"/>
+                                            <constraint firstAttribute="height" constant="160" id="GX5-f2-ts0"/>
+                                            <constraint firstItem="wGv-iu-f7l" firstAttribute="leading" secondItem="eT3-eW-cdA" secondAttribute="leading" id="dRF-e4-T3w"/>
+                                            <constraint firstItem="M6P-im-i4a" firstAttribute="top" secondItem="eT3-eW-cdA" secondAttribute="top" constant="5" id="gDq-wZ-9li"/>
+                                            <constraint firstAttribute="trailing" secondItem="M6P-im-i4a" secondAttribute="trailing" constant="5" id="igp-mz-W7z"/>
+                                            <constraint firstAttribute="trailing" secondItem="wGv-iu-f7l" secondAttribute="trailing" id="j7a-lG-XnZ"/>
+                                            <constraint firstItem="M6P-im-i4a" firstAttribute="leading" secondItem="eT3-eW-cdA" secondAttribute="leading" constant="5" id="mZb-nO-Lzq"/>
+                                            <constraint firstItem="wGv-iu-f7l" firstAttribute="top" secondItem="M6P-im-i4a" secondAttribute="bottom" constant="5" id="wgu-1g-HTK"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -169,13 +234,16 @@
                                     <constraint firstItem="UYw-pg-e6J" firstAttribute="top" secondItem="tmD-Wj-nuq" secondAttribute="bottom" id="Fnc-yz-4JY"/>
                                     <constraint firstItem="UYw-pg-e6J" firstAttribute="leading" secondItem="bFX-zn-k8n" secondAttribute="leading" id="IWm-dO-Noc"/>
                                     <constraint firstAttribute="trailing" secondItem="25s-88-cQX" secondAttribute="trailing" id="Rfx-Jf-TFb"/>
+                                    <constraint firstAttribute="trailing" secondItem="eT3-eW-cdA" secondAttribute="trailing" constant="10" id="bvm-1f-7xH"/>
                                     <constraint firstAttribute="trailing" secondItem="UYw-pg-e6J" secondAttribute="trailing" id="cLP-Ji-Ez9"/>
                                     <constraint firstItem="tmD-Wj-nuq" firstAttribute="top" secondItem="bFX-zn-k8n" secondAttribute="top" id="er7-Y8-dgI"/>
                                     <constraint firstItem="25s-88-cQX" firstAttribute="leading" secondItem="bFX-zn-k8n" secondAttribute="leading" id="jU3-kc-Lyo"/>
                                     <constraint firstItem="25s-88-cQX" firstAttribute="top" secondItem="tmD-Wj-nuq" secondAttribute="bottom" id="kbx-eJ-vU6"/>
                                     <constraint firstItem="tmD-Wj-nuq" firstAttribute="leading" secondItem="bFX-zn-k8n" secondAttribute="leading" id="nFA-vi-SI1"/>
+                                    <constraint firstItem="eT3-eW-cdA" firstAttribute="leading" secondItem="bFX-zn-k8n" secondAttribute="leading" constant="10" id="pHe-Fi-5Ai"/>
                                     <constraint firstAttribute="bottom" secondItem="UYw-pg-e6J" secondAttribute="bottom" id="pwq-O7-Ahg"/>
                                     <constraint firstAttribute="bottom" secondItem="25s-88-cQX" secondAttribute="bottom" id="wIh-tM-XD1"/>
+                                    <constraint firstAttribute="bottom" secondItem="eT3-eW-cdA" secondAttribute="bottom" constant="10" id="yRo-wH-d3J"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -196,7 +264,10 @@
                         <outlet property="emptyV" destination="UYw-pg-e6J" id="VmM-Ph-OVh"/>
                         <outlet property="homeTabTBI" destination="09B-al-wDi" id="dPh-GQ-z4u"/>
                         <outlet property="humidityStateLB" destination="kKm-F4-5US" id="IFf-3b-vXI"/>
+                        <outlet property="tourAddressLB" destination="uNg-AM-38b" id="PJJ-av-wwM"/>
                         <outlet property="tourListCV" destination="25s-88-cQX" id="wwq-1P-E5J"/>
+                        <outlet property="tourMapOutV" destination="eT3-eW-cdA" id="vJw-40-1k2"/>
+                        <outlet property="tourMapV" destination="wGv-iu-f7l" id="VsM-3Q-UeK"/>
                         <outlet property="visualityStateLB" destination="Ykb-hE-KRS" id="5ro-fH-M5d"/>
                         <outlet property="wallPaperIMG" destination="w3U-ct-lJT" id="ujV-JS-Clx"/>
                         <outlet property="weatherLogoIMG" destination="j8i-ab-WLs" id="Dud-rl-bqV"/>
@@ -209,6 +280,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="baseline_clear_black_18pt_1x" width="54" height="54"/>
         <image name="baseline_home_white_24pt_1x" width="72" height="72"/>
         <image name="first" width="30" height="30"/>
         <image name="page_not_found" width="256" height="256"/>

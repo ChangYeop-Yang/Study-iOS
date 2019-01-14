@@ -12,14 +12,14 @@ import AudioToolbox
 class ConnectViewController: UIViewController {    
     
     // MARK: - Outlet Variables
-    @IBOutlet weak var locationAutorityV: RoundView!
-    @IBOutlet weak var outlineAppMarkV: UIView! {
+    @IBOutlet private weak var locationAutorityV: RoundView!
+    @IBOutlet private weak var outlineAppMarkV: UIView! {
         didSet {
             outlineAppMarkV.layer.borderWidth = 3
             outlineAppMarkV.layer.borderColor = UIColor.white.cgColor
         }
     }
-    @IBOutlet weak var showIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var showIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +59,7 @@ class ConnectViewController: UIViewController {
     }
 
     // MARK: - Action Method
-    @IBAction func acquireLocation(_ sender: UIButton) {
+    @IBAction private func acquireLocation(_ sender: UIButton) {
         
         self.showIndicator.isHidden         = false
         self.locationAutorityV.isHidden     = true

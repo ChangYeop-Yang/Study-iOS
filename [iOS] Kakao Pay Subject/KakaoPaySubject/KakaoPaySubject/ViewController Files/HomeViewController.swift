@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 import SwiftSpinner
 
 class HomeViewController: UIViewController {
@@ -22,10 +23,14 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var tourListCV:          UICollectionView!
     @IBOutlet private weak var homeTabTBI:          UITabBarItem!
     @IBOutlet private weak var emptyV:              UIView!
+    @IBOutlet private weak var tourMapV:            MKMapView!
+    @IBOutlet private weak var tourAddressLB:       UILabel!
+    @IBOutlet private weak var tourMapOutV:         CardView!
     
     // MARK: - Variables
-    private let CELL_NAME: String           = "DetailCell"
-    private var currentLocation             = CLocation.locationInstance.getCurrentLocation()
+    private var mapMarker: MKPointAnnotation    = MKPointAnnotation()
+    private let CELL_NAME: String               = "DetailCell"
+    private var currentLocation                 = CLocation.locationInstance.getCurrentLocation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +44,35 @@ class HomeViewController: UIViewController {
     // MARK: - Method
     private func settingLongPressGesture(duration: Double, target: UICollectionView) {
         
-        let gesture = UILongPressGestureRecognizer(target: self, action: #selector(showMapActionSheet(gesture:)))
+        let gesture = UILongPressGestureRecognizer(target: self, action: #selector(showActionSheet(gesture:)))
         gesture.minimumPressDuration = duration
         gesture.delaysTouchesBegan = true
         target.addGestureRecognizer(gesture)
+    }
+    private func showMapKit(lat: Double, long: Double, index: Int) {
+        
+        // MKMapView
+        let center             = CLLocationCoordinate2D(latitude: lat, longitude: long)
+        let span               = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        
+        DispatchQueue.main.async { [unowned self] in
+            
+            vibrateDevice()
+            
+            UIView.animate(withDuration: 0.5, animations: { [unowned self] in
+                self.tourMapOutV.isHidden = false
+            }) { [unowned self] finsh in
+                
+                self.tourAddressLB.text        = Tour.tourInstance.getTourInformation()[index].address
+                
+                // MKMapView Marker
+                self.mapMarker.title           = "HERE"
+                self.mapMarker.subtitle        = Tour.tourInstance.getTourInformation()[index].name
+                self.mapMarker.coordinate      = center
+                self.tourMapV.addAnnotation(self.mapMarker)
+                self.tourMapV.setRegion(MKCoordinateRegion(center: center, span: span), animated: true)
+            }
+        }
     }
     private func showWeatherInformation() {
         
@@ -107,22 +137,26 @@ class HomeViewController: UIViewController {
             SwiftSpinner.hide()
         }
     }
-    @objc private func showMapActionSheet(gesture : UILongPressGestureRecognizer) {
+    @objc private func showActionSheet(gesture : UILongPressGestureRecognizer) {
      
         switch gesture.state {
+            
             case .ended :
-                
                 let location    = gesture.location(in: self.tourListCV)
                 guard let index = self.tourListCV.indexPathForItem(at: location) else {
                         return
                 }
             
-                let test = Tour.tourInstance.getTourInformation()[index.row].location
-            
-                
+                let coor = Tour.tourInstance.getTourInformation()[index.row].location
+                showMapKit(lat: (coor.lat as NSString).doubleValue, long: (coor.long as NSString).doubleValue, index: index.row)
             
             default: return
         }
+    }
+    
+    // MARK: - Action
+    @IBAction private func closeMapView(_ sender: UIButton) {
+        self.tourMapOutV.isHidden = true
     }
 }
 
