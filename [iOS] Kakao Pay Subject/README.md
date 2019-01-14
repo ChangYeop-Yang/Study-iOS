@@ -18,10 +18,17 @@
 |:-------------------:|:-------------------:|
 |![](https://user-images.githubusercontent.com/20036523/51105624-de606e00-182c-11e9-9b29-9635e0702b0d.png)|![](https://user-images.githubusercontent.com/20036523/51105627-def90480-182c-11e9-84dd-4caa8b0a0c50.png)|
 
-
 |:camera: DETAIL Display|:camera: SETTING Display|
 |:---------------------:|:----------------------:|
 |![](https://user-images.githubusercontent.com/20036523/51105625-de606e00-182c-11e9-9644-102ce4a4e8a4.png)|![](https://user-images.githubusercontent.com/20036523/51105626-def90480-182c-11e9-8b6d-807f30a0e8be.png)|
+
+|:mag_right: HOME Display|
+|:----------------------:|
+|![](https://user-images.githubusercontent.com/20036523/51111363-32744e00-183f-11e9-8b86-78e97382e6c2.JPG)|
+
+|:mag_right: DETAIL Display|
+|:------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/51111364-32744e00-183f-11e9-94b9-3a6c3e608c3b.JPG)|
 
 ## ★ Demo Play for Application
 
