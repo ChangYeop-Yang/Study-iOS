@@ -2,6 +2,20 @@
 
 :floppy_disk: [Download - 2019 Kakao Pay Client Zip File](https://github.com/ChangYeop-Yang/Study-iOS/files/2754882/iOS.Kakao.Pay.Subject.zip)
 
+## ★ Application Development Environment
+
+:wrench: iOS Version 12.1.2 (iPhone 6)
+
+:wrench: Simulator Version 10.1 (iPhone XS)
+
+:wrench: macOS Mojave Version 10.14.2
+
+:wrench: GitHub Desktop Version 1.4.3 
+
+:wrench: Xcode  Version 10.1 (10B61)
+
+:wrench: Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)
+
 ## ★ Application UI/UX Layer
 
 |:straight_ruler: Home Display Layer|:straight_ruler: Home Display Layer|
