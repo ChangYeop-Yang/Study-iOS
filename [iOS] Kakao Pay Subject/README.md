@@ -54,6 +54,8 @@
 
 :helicopter: [Alamofire - GitHub **(Open Source API)**](https://github.com/Alamofire/Alamofire)
 
+* Alamfire를 사용 한 이유는 HTTP 통신을 위해서는 복잡한 구조의 URLSession을 사용하여야 합니다. 그렇기에 HTTP 통신을 단순하게 구현 한 Alamofire를 사용함으로써 개발 기간과 유지보수 측면을 강화하기 위해서 해당 오픈소스를 사용하게 되었습니다.
+
 :helicopter: [SwiftSpinner - GitHub **(Open Source API)**](https://github.com/icanzilb/SwiftSpinner)
 
 ## ★ REFERENCE
