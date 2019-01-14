@@ -1,6 +1,25 @@
 # ■ 2019 Kakao Pay Client 사전과제
 
+## ★ Application UI/UX Layer
+
+|:straight_ruler: Home Display Layer|:straight_ruler: Home Display Layer|
+|:---------------------------------:|:---------------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/51105630-def90480-182c-11e9-895d-33e88b1951ec.png)|![](https://user-images.githubusercontent.com/20036523/51105628-def90480-182c-11e9-9bee-e576e592e0a4.png)|
+
+|:straight_ruler: Detail Display Layer|:straight_ruler: Detail Display Layer|
+|:-----------------------------------:|:-----------------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/51105622-ddc7d780-182c-11e9-92c2-f6dde5beee85.png)|![](https://user-images.githubusercontent.com/20036523/51105623-de606e00-182c-11e9-8c6d-7a5f42041abd.png)|
+
 ## ★ Application UI/UX
+
+|:camera: HOME Display|:camera: HOME Display|
+|:-------------------:|:-------------------:|
+|![](https://user-images.githubusercontent.com/20036523/51105624-de606e00-182c-11e9-9b29-9635e0702b0d.png)|![](https://user-images.githubusercontent.com/20036523/51105627-def90480-182c-11e9-84dd-4caa8b0a0c50.png)|
+
+
+|:camera: DETAIL Display|:camera: SETTING Display|
+|:---------------------:|:----------------------:|
+|![](https://user-images.githubusercontent.com/20036523/51105625-de606e00-182c-11e9-9644-102ce4a4e8a4.png)|![](https://user-images.githubusercontent.com/20036523/51105626-def90480-182c-11e9-8b6d-807f30a0e8be.png)|
 
 ## ★ Demo Play for Application
 
