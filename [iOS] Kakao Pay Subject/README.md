@@ -4,7 +4,7 @@
 
 * Simulator를 통하여 Application을 실행하시는 경우에는 **국내 임의 좌표 (Example: 37.394063, 127.110112)** 을 이용해주시고 **Simulator Device 언어 환경은 한국어**로 변경 후 실행시켜주세요 :exclamation::exclamation::exclamation:
 
-* 아이템을 1초 이상 길게 누를 경우에는 선택 한 관광지의 지도가 나타나며 짧게 누를 경우 상세 화면으로 전환이 됩니다.
+* 아이템을 1초 이상 길게 누를 경우에는 선택 한 관광지의 위치가 표시 된 지도가 나타나며 짧게 누를 경우에는 상세 화면으로 전환이 됩니다.
 
 ## ★ Application Development Environment
 
