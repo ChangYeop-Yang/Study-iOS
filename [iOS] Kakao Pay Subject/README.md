@@ -46,6 +46,121 @@
 |:------------------------:|
 |![](https://user-images.githubusercontent.com/20036523/51111364-32744e00-183f-11e9-94b9-3a6c3e608c3b.JPG)|
 
+## ★ Application Source Code
+
+##### ※ Public Information REST API Source Code
+```swift
+private func extractTourInformation(parser: [String: Any]) -> TourINF {
+        
+        let containKeys           = parser.keys
+        
+        var information: TourINF = TourINF()
+        for key in containKeys where containKeys.contains(key) {
+            
+            guard let tourKey: TourCase = TourCase(rawValue: key) else {
+                continue
+            }
+            
+            switch tourKey {
+                case .Title: information.name           = parser[key] as! String
+                case .Tel:   information.tel            = parser[key] as! String
+                case .Dist:  information.distance       = parser[key] as! Int
+                case .Addr:  information.address        = parser[key] as! String
+                case .MapX:  information.location.long  = String(describing: parser[key]!)
+                case .MapY:  information.location.lat   = String(describing: parser[key]!)
+                case .Image: information.imageURL.append(parser[key] as! String)
+            }
+        }
+        
+        return information
+    }
+    
+public func parserTourInformation(group: DispatchGroup, latitude: Double, longitude: Double) {
+        
+        group.enter()
+        DispatchQueue.global(qos: .userInteractive).async(group: group) {
+            
+            guard let link: URL = URL(string: "http://api.visitkorea.or.kr/openapi/service/rest/KorService/locationBasedList?serviceKey=\(TOUR_API_KEY)&numOfRows=20&pageNo=1&MobileOS=ETC&MobileApp=KakaoSubject&arrange=O&contentTypeId=12&mapX=\(longitude)&mapY=\(latitude)&radius=10000&listYN=Y&_type=json") else {
+                fatalError("❌ Error, could not connect server.")
+            }
+            
+            Alamofire.request(link).responseJSON { [unowned self] response in
+                
+                guard response.result.isSuccess else {
+                    group.leave()
+                    fatalError("❌ Error, Not Receive Data From Tour API Server.")
+                }
+                
+                switch response.response?.statusCode {
+                    case .none : print("❌ Error, Not Receive Data From Tour API Server.")
+                    case .some(_) :
+                        
+                        guard let result = response.result.value, let json = result as? NSDictionary else { return }
+                        
+                        guard let response   = json["response"] as? [String: Any] else { return }
+                        guard let body       = response["body"] as? [String: Any] else { return }
+                        guard let items      = body["items"]    as? [String: Any] else { return }
+                        guard let item       = items["item"]    as? [[String: Any]] else { return }
+                        
+                        for information in item {
+                            self.tourINFList.append( self.extractTourInformation(parser: information) )
+                        }
+                }
+                group.leave()
+                
+            }
+        }    
+```
+
+##### ※ Kakao Search Platform REST API Source Code
+
+```swift
+// MARK: - Enum
+private enum WebKey: String {
+     case DateTime = "datetime"
+     case Contents = "contents"
+     case Title    = "title"
+     case Url      = "url"
+     case ImageUrl = "image_url"
+     case Display  = "display_sitename"
+}
+
+public func parserImageWebTour(group: DispatchGroup, query: String) {
+        
+        group.enter()
+        self.webImageInformationList.removeAll()
+        
+        Alamofire.request("https://dapi.kakao.com/v2/search/image", method: .get, parameters: ["query": query], encoding: URLEncoding.default, headers: header).responseJSON { [unowned self] response in
+            
+            guard response.result.isSuccess else {
+                group.leave()
+                fatalError("❌ Error, Not Receive Data From Kakao Image API Server.")
+            }
+            
+            switch response.response?.statusCode {
+                
+                case .none :
+                    group.leave()
+                    print("❌ Error, Not Receive Data From Kakao API Server.")
+                case .some(_) :
+                    
+                    guard let result = response.result.value, let json = result as? NSDictionary else { return }
+                    
+                    guard let documents   = json["documents"] as? [[String: Any]] else { return }
+                    
+                    for item in documents {
+                        guard let inf: WebImageINF = self.extractWebTourInformation(item: item, type: false) as? WebImageINF else {
+                            continue
+                        }
+                        self.webImageInformationList.append(inf)
+                    }
+                    
+                    group.leave()
+            }
+            
+        }
+```
+
 ## ★ Demo Play for Application
 
 |:movie_camera: Demo Play for Application|
