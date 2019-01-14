@@ -1,4 +1,4 @@
-# ■ 2019 Kakao Pay Client 사전과제
+# ■ 2019 Kakao Pay Client 사전과제 <kbd>**MOBILE - iOS**</kbd>
 
 :floppy_disk: [Download - 2019 Kakao Pay Client Zip File](https://github.com/ChangYeop-Yang/Study-iOS/files/2754882/iOS.Kakao.Pay.Subject.zip)
 
