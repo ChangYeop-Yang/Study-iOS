@@ -11,8 +11,10 @@
 * Automatic Reference Counting (ARC) is a memory management feature of the Clang compiler providing automatic reference counting for the Objective-C and Swift programming languages. **At compile time, it inserts into the object code messages retain and release which increase and decrease the reference count at run time, marking for deallocation those objects when the number of references to them reaches zero.**
 </br></br> ARC differs from tracing garbage collection in that there is no background process that deallocates the objects asynchronously at runtime. Unlike garbage collection, ARC does not handle reference cycles automatically. This means that as long as there are "strong" references to an object, it will not be deallocated. **Strong cross-references can accordingly create deadlocks and memory leaks. It is up to the developer to break cycles by using weak references.**
 
-* [create a deadlock in Grand Central Dispatch](https://stackoverflow.com/questions/15381209/how-do-i-create-a-deadlock-in-grand-central-dispatch)
 ```Swift
+How do I create a deadlock in Grand Central Dispatch?
+https://stackoverflow.com/questions/15381209/how-do-i-create-a-deadlock-in-grand-central-dispatch
+
 dispatch_queue_t queue = dispatch_queue_create("my.label", DISPATCH_QUEUE_SERIAL);
 dispatch_async(queue, ^{
     dispatch_sync(queue, ^{
