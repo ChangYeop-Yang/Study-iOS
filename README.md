@@ -155,16 +155,6 @@ Lets you know that your app is being terminated. This method is not called if yo
 
 * * *
 
-* **viewWillDisappear**</br>
-**Called just before the view controller’s content view is removed from the app’s view hierarchy.** Use this method to perform cleanup tasks like committing changes or resigning the first responder status. Despite the name, the system does not call this method just because the content view will be hidden or obscured. This method is only called when the content view is about to be removed from the app’s view hierarchy.
-
-* * *
-
-* **viewDidDisappear**</br>
-**Called just after the view controller’s content view has been removed from the app’s view hierarchy.** Use this method to perform additional teardown activities. Despite the name, the system does not call this method just because the content view has become hidden or obscured. This method is only called when the content view has been removed from the app’s view hierarchy.
-
-* * *
-
 * **viewDidLayoutSubviews**</br>
 **Called to notify the view controller that its view has just laid out its subviews.** When the bounds change for a view controller's view, the view adjusts the positions of its subviews and then the system calls this method. However, this method being called does not indicate that the individual layouts of the view's subviews have been adjusted. Each subview is responsible for adjusting its own layout.
 </br></br>Your view controller can override this method to make changes after the view lays out its subviews. The default implementation of this method does nothing.
@@ -173,6 +163,16 @@ Lets you know that your app is being terminated. This method is not called if yo
 
 * **viewWillLayoutSubviews**</br>
 Called to notify the view controller that its view is about to layout its subviews. When a view's bounds change, the view adjusts the position of its subviews. Your view controller can override this method to make changes before the view lays out its subviews. The default implementation of this method does nothing.
+
+* * *
+
+* **viewWillDisappear**</br>
+**Called just before the view controller’s content view is removed from the app’s view hierarchy.** Use this method to perform cleanup tasks like committing changes or resigning the first responder status. Despite the name, the system does not call this method just because the content view will be hidden or obscured. This method is only called when the content view is about to be removed from the app’s view hierarchy.
+
+* * *
+
+* **viewDidDisappear**</br>
+**Called just after the view controller’s content view has been removed from the app’s view hierarchy.** Use this method to perform additional teardown activities. Despite the name, the system does not call this method just because the content view has become hidden or obscured. This method is only called when the content view has been removed from the app’s view hierarchy.
 
 ## ★ UIKit
 
