@@ -182,6 +182,10 @@ Called to notify the view controller that its view is about to layout its subvie
 
 ###### ※ UITableViewDataSource
 
+* The object that acts as the data source of the table view. 
+
+* The data source must adopt the UITableViewDataSource protocol. The data source is not retained.
+
 ```swift
  @required 
  // 특정 위치에 표시할 셀을 요청하는 메서드
@@ -212,6 +216,10 @@ Called to notify the view controller that its view is about to layout its subvie
 ```
 
 ###### ※ UITableViewDelegate
+
+* The object that acts as the delegate of the table view.
+
+* The delegate must adopt the UITableViewDelegate protocol. The delegate is not retained.
 
 ```swift
  // 특정 위치 행의 높이를 묻는 메서드
