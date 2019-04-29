@@ -183,7 +183,7 @@ Called to notify the view controller that its view is about to layout its subvie
 ###### ※ UITableViewDataSource
 
 ```swift
-   @required 
+ @required 
  // 특정 위치에 표시할 셀을 요청하는 메서드
  func tableView(UITableView, cellForRowAt: IndexPath) 
  
@@ -214,7 +214,7 @@ Called to notify the view controller that its view is about to layout its subvie
 ###### ※ UITableViewDelegate
 
 ```swift
-    // 특정 위치 행의 높이를 묻는 메서드
+ // 특정 위치 행의 높이를 묻는 메서드
  func tableView(UITableView, heightForRowAt: IndexPath)
  // 특정 위치 행의 들여쓰기 수준을 묻는 메서드
  func tableView(UITableView, indentationLevelForRowAt: IndexPath)
