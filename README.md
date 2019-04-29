@@ -183,41 +183,61 @@ Called to notify the view controller that its view is about to layout its subvie
 ###### ※ UITableViewDataSource
 
 ```swift
-    // N 번째 섹션에 몇 개의 Row가 존재하는지를 반환하는 메소드
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-    
-    // N 번째 섹션에 M 번째 Row를 그리는데 필요한 셀을 반환하는 메소드
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        // Basic Type
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell Identification")
-        
-        // Custom Type
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell Identification", for: indexPath) as! Cell Type
-        
-        return cell
-    }
+   @required 
+ // 특정 위치에 표시할 셀을 요청하는 메서드
+ func tableView(UITableView, cellForRowAt: IndexPath) 
+ 
+ // 각 섹션에 표시할 행의 개수를 묻는 메서드
+ func tableView(UITableView, numberOfRowsInSection: Int)
+ 
+ @optional
+ // 테이블뷰의 총 섹션 개수를 묻는 메서드
+ func numberOfSections(in: UITableView)
+ 
+ // 특정 섹션의 헤더 혹은 푸터 타이틀을 묻는 메서드
+ func tableView(UITableView, titleForHeaderInSection: Int)
+ func tableView(UITableView, titleForFooterInSection: Int)
+ 
+ // 특정 위치의 행을 삭제 또는 추가 요청하는 메서드
+ func tableView(UITableView, commit: UITableViewCellEditingStyle, forRowAt: IndexPath)
+ 
+ // 특정 위치의 행이 편집 가능한지 묻는 메서드
+ func tableView(UITableView, canEditRowAt: IndexPath)
+
+ // 특정 위치의 행을 재정렬 할 수 있는지 묻는 메서드
+ func tableView(UITableView, canMoveRowAt: IndexPath)
+ 
+ // 특정 위치의 행을 다른 위치로 옮기는 메서드
+ func tableView(UITableView, moveRowAt: IndexPath, to: IndexPath)
 ```
 
 ###### ※ UITableViewDelegate
 
 ```swift
-    // 사용자가 Cell을 선택시 Cell의 인덱스를 반환하는 메소드
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    }
-    
-    // Set UITableview swipe to delete here
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)     {
-        if (editingStyle == .delete) {
-            // Delete Tableview cell here
-        }
-    }
+    // 특정 위치 행의 높이를 묻는 메서드
+ func tableView(UITableView, heightForRowAt: IndexPath)
+ // 특정 위치 행의 들여쓰기 수준을 묻는 메서드
+ func tableView(UITableView, indentationLevelForRowAt: IndexPath)
+
+ // 지정된 행이 선택되었음을 알리는 메서드
+ func tableView(UITableView, didSelectRowAt: IndexPath)
+
+ // 지정된 행의 선택이 해제되었음을 알리는 메서드
+ func tableView(UITableView, didDeselectRowAt: IndexPath)
+
+ // 특정 섹션의 헤더뷰 또는 푸터뷰를 요청하는 메서드
+ func tableView(UITableView, viewForHeaderInSection: Int)
+ func tableView(UITableView, viewForFooterInSection: Int)
+
+ // 특정 섹션의 헤더뷰 또는 푸터뷰의 높이를 물어보는 메서드
+ func tableView(UITableView, heightForHeaderInSection: Int)
+ func tableView(UITableView, heightForFooterInSection: Int)
+
+ // 테이블뷰가 편집모드에 들어갔음을 알리는 메서드
+ func tableView(UITableView, willBeginEditingRowAt: IndexPath)
+
+ // 테이블뷰가 편집모드에서 빠져나왔음을 알리는 메서드
+ func tableView(UITableView, didEndEditingRowAt: IndexPath?)
 ```
 
 ## ★ CORE ML
