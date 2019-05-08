@@ -268,7 +268,7 @@ Called to notify the view controller that its view is about to layout its subvie
 
 * Operation Queue에서는 연산(Operation)을 일시 중지, 다시 시작 및 취소를 할 수 있습니다.
 
-#### 💊 Application Example
+#### 💊 [Operation Queue vs Dispatch Queue for Application Example](https://www.edwith.org/boostcourse-ios)
 
 * Operation Queue - 비동기적으로 실행되어야 하는 작업을 객체 지향적인 방법으로 사용하는 데 적합합니다. KVO(key Value Observing)를 사용해 작업 진행 상황을 감시하는 방법이 필요할 때도 적합합니다.
 
