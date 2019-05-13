@@ -366,6 +366,16 @@ do { try managedContext.save() }
 catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
 ```
 
+## 📣 [Close iOS Keyboard by touching anywhere using Swift](https://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)
+
+```swift
+override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+
+      self.view.endEditing(true)
+
+}
+```
+
 ## ★ REFERENCE
 
 :airplane: [The iOS Application Lifecycle](https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle)
