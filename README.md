@@ -95,7 +95,7 @@ unowned var unownedReference: MyClass // Weak reference, cannot be nil
 * * *
 
 <p align="center">
-  <img src="https://docs-assets.developer.apple.com/published/cfb6ae10b1/high_level_flow_2x_2bc77269-019d-4554-83b8-6aeecb73c348.png" width="350" height="350" />
+  <img src="https://docs-assets.developer.apple.com/published/c63cd35863/4d403429-fa30-4706-863f-5e3617ee21d0.png" width="350" height="350" />
 </p>
 
 * Not Running - Either the application has not started yet or was running and has been terminated by the system.
