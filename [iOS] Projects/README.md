@@ -60,6 +60,6 @@
 
 * 서버의 API를 통해 영화 정보를 요청하고 가져옵니다. 가져온 정보를 테이블뷰와 컬렉션뷰를 활용하여 화면에 표현해줍니다. 여러 조건으로 데이터를 요청할 수 있고, 영화 목록 중 원하는 영화를 선택하면 상세 정보를 볼 수 있습니다. 또, 한 줄 감상평을 남길 수 있습니다.
 
-###### 🔑 Development Keyword - `Autolayout`, `Swift`, `UIAlertController`, `UIAlertAction`, `UITabBarControler`, `DispatchQueue`, `Grand Central Dispatch`, `NotificationCenter`
+###### 🔑 Development Keyword - `Autolayout`, `Swift`, `UIAlertController`, `UIAlertAction`, `UITabBarControler`, `DispatchQueue`, `Grand Central Dispatch`, `NotificationCenter`, `URLSession`
 
 ###### 🚀 [Project Description URL](https://www.edwith.org/boostcourse-ios/project/24/content/22)
