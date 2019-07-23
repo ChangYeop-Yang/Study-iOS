@@ -12,7 +12,7 @@
 
 * AVFoundation 프레임워크의 AVAudioPlayer라는 클래스를 통해 음원을 재생하는 애플리케이션을 제작합니다. 이 프로젝트는 부스트코스 첫 번째 프로젝트로 앞으로 배워나갈 iOS 프로그래밍의 일부를 맛볼 수 있는 예제입니다. Xcode 사용 방법부터 실제로 동작하는 작은 애플리케이션 제작을 해 볼 수 있습니다.
 
-###### 🔑 Development Keyword - `Autolayout`, `Swift`, `Foundation`, `UIKit`, `Cocoa Touch`, `Model-View-Controller`, ``
+###### 🔑 Development Keyword - `Autolayout`, `Swift`, `Foundation`, `UIKit`, `Cocoa Touch`, `Model-View-Controller`
 
 ###### 🚀 [Project Description URL](https://www.edwith.org/boostcourse-ios/project/20/content/18)
 
