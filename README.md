@@ -276,7 +276,7 @@ Called to notify the view controller that its view is about to layout its subvie
 
 * Core Data is an object graph and persistence framework provided by Apple in the macOS and iOS operating systems. It was introduced in Mac OS X 10.4 Tiger and iOS with iPhone SDK 3.0. It allows data organized by the relational entity–attribute model to be serialized into XML, binary, or SQLite stores. The data can be manipulated using higher level objects representing entities and their relationships. Core Data manages the serialized version, providing object lifecycle and object graph management, including persistence. Core Data interfaces directly with SQLite, insulating the developer from the underlying SQL.
 
-#### ※ Core Data AppDelegate Source Code
+#### 📄 Core Data AppDelegate Source Code
 
 ```swift
 // MARK: - Core Data stack
@@ -325,7 +325,7 @@ Called to notify the view controller that its view is about to layout its subvie
     }
 ```
 
-#### ※ Core Data Save Example Source Code
+#### 📄 Core Data Save Example Source Code
 
 ```swift
 guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -338,7 +338,7 @@ do { try managedContext.save() }
 catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
 ```
 
-#### ※ Core Data Load Example Source Code
+#### 📄 Core Data Load Example Source Code
 
 ```swift
 guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -350,7 +350,7 @@ do { let objects = try managedContext.fetch(fetchRequest) as! [Object Type] }
 catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
 ```
 
-#### ※ Core Data Delete Example Source Code
+#### 📄 Core Data Delete Example Source Code
 
 ```swift
 guard let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -361,6 +361,10 @@ managedContext.delete(Entity Object)
 do { try managedContext.save() }
 catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
 ```
+
+* * * * * * * * * *
+
+# ■ iOS Development Technology
 
 ## 📣 [Close iOS Keyboard by touching anywhere using Swift](https://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)
 
