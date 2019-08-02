@@ -1,6 +1,6 @@
 # ■ iOS - Project <kbd>iOS</kbd>
 
-## 📣 [iOS] One Day Project
+## 📣 [iOS] OneDay Project
 
 ## 📣 [[iOS] Edwith Boost Course Project](https://dev-dream-world.tistory.com/47)
 
