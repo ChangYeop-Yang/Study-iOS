@@ -2,7 +2,7 @@
 
 ## 📣 [iOS] One Day Project
 
-## 📣 [iOS] Edwith Boost Course Project
+## 📣 [[iOS] Edwith Boost Course Project](https://dev-dream-world.tistory.com/47)
 
 ![](https://k.kakaocdn.net/dn/ceHqPr/btqxbACjqPl/kKL91PqYCnqjRJRiWN9jQK/img.jpg)
 
