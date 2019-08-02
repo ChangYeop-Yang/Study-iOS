@@ -1,5 +1,7 @@
 # ■ iOS - Project <kbd>iOS</kbd>
 
+## 📣 [iOS] One Day Project
+
 ## 📣 [iOS] Edwith Boost Course Project
 
 ![](https://k.kakaocdn.net/dn/ceHqPr/btqxbACjqPl/kKL91PqYCnqjRJRiWN9jQK/img.jpg)
