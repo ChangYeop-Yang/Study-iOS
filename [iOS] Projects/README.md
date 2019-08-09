@@ -1,5 +1,3 @@
-# ■ iOS - Project <kbd>iOS</kbd>
-
 ## 📣 [iOS] SAIOT Project
 
 ###### ✏️ Description - 교육 장비 Arduino, Raspberry-pi 및 스마트 전구 Philips HUE를 통하여 다양한 센서와 카메라를 통하여 제작함으로써 다양한 센서 데이터를 통하여 iOS와 Android 어플리케이션을 통하여 현재 위치의 센서 정보를 시각적인 그래프를 통하여 제공하며 또한 가스 및 화재 위험의 긴급한 기능을 푸쉬 알람을 통하여 제공합니다. 또한 카메라 기능을 통하여 사물 및 사람을 인식하여 사용자에게 정보를 제공하는 기능을 제공합니다.
