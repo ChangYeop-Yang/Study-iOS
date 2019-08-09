@@ -13,7 +13,7 @@
 
 *  Automatic Reference Counting (ARC)는 Objective-C와 Swift 프로그래밍 언어에 대해서 자동 참조 계산 기능을 제공하는 Clang 컴파일러의 메모리 관리 기능입니다. 컴파일 시, 런타임에 참조 횟수를 늘리거나 감소시키는 객체 코드 메시지를 삽입합니다. 또한, 참조 횟수가 0이 되면 해당 객체의 할당을 해제합니다. </br></br>Automatic Reference Counting (ARC)는 런타임에 객체를 비동기적으로 할당하여 해제하는 백그라운드 프로세스가 없다는 점에서 Garbage Collection과 다릅니다. Garbage Collection은 프로그램이 실행되는 동안에도 사용하지 않는 객체를 자동으로 추적하여 메모리를 해제하지만, Automatic Reference Counting (ARC)는 프로그램이 실행되는 동안에 자동으로 Reference Counting을 하여 메모리를 관리하지 않습니다. 그러므로 Strong을 통한 잘못된 객체 사용은 교착 상태 (Dead Lock) 및 메모리 누수 (Memory Leak)을 일으킬 수 있습니다. 이는 Weak을 통한 약한 연결 참조를 통하여 개발자가 메모리 사이클이 발생하지 않도록 개발을 진행하여야 합니다. </br></br>Apple Inc. 는 macOS (OS X) 및 iOS와 같은 운영 체제에 ARC를 배포합니다. Mac OS X Snow Leopard와 iOS 4 이후부터 사용 가능하지만 한정된 기능만을 사용할 수 있었으며, Mac OS X Lion과 iOS 5에서부터는 완벽하게 지원되었습니다. OS X Mountain Lion에서는 Garbage Collection이 Automatic Reference Counting (ARC)를 위해 더 이상 사용되지 않으며 macOS Sierra의 Objective-C 런타임 라이브러리에서 제거되었습니다.
 
-#### 📄 [GCD Deadlock Source Code](https://stackoverflow.com/questions/15381209/how-do-i-create-a-deadlock-in-grand-central-dispatch)
+#### 📄 [GCD (Grand Central Dispatch) Deadlock Source Code](https://stackoverflow.com/questions/15381209/how-do-i-create-a-deadlock-in-grand-central-dispatch)
 
 ```Swift
 /* How do I create a deadlock in Grand Central Dispatch?
