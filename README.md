@@ -362,17 +362,15 @@ do { try managedContext.save() }
 catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
 ```
 
-* * * * * * * * * *
+## ★ 클로저 (Closure)
 
-# ■ iOS Development Technology
+* 클로저란 코드의 블럭이자, 일급 객체로 완벽한 역할을 할 수 있습니다. 일급 객체란 전달 인자로 보낼 수 있고, 변수/상수 등으로 저장하거나 전달할 수 있으며, 함수의 반환 값이 될 수도 있습니다. 실제 우리가 알고 있는 함수는 클로저의 한 형태로, 이름이 있는 클로저입니다.
 
-## 📣 [Close iOS Keyboard by touching anywhere using Swift](https://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)
+#### 📄 Closure Syntax Source Code
 
 ```swift
-override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-
-      self.view.endEditing(true)
-
+{ (parameters) -> return type in
+    statements
 }
 ```
 
