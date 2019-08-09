@@ -401,11 +401,11 @@ let reversed: [String] = names.sorted {
 let reversed: [String] = names.sorted { $0 > $1 }   
 ```
 
-## ★ REFERENCE
+## 📣 REFERENCE
 
 :airplane: [iOS REFERENCE URL](https://github.com/ChangYeop-Yang/Study-iOS/issues/5)
 
-## ★ Developer Information
+## 📣 Developer Information
 
 |:rocket: Github QR Code|:pencil: Naver-Blog QR Code|:eyeglasses: Linked-In QR Code|
 |:---------------------:|:-------------------------:|:----------------------------:|
