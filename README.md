@@ -2,7 +2,7 @@
 
 * iOS (formerly iPhone OS) is a mobile operating system created and developed by Apple Inc. exclusively for its hardware. It is the operating system that presently powers many of the company's mobile devices, including the iPhone, iPad, and iPod Touch. It is the second most popular mobile operating system globally after Android.
 
-## ★ Automatic Reference Counting (ARC)
+## 📣 Automatic Reference Counting (ARC)
 
 |:camera: ARC Image 001|:camera: ARC Image 002|
 |:--------------------:|:--------------------:|
@@ -48,7 +48,7 @@ weak var weakReference: MyClass?      // Weak reference, can be nil
 unowned var unownedReference: MyClass // Weak reference, cannot be nil
 ```
 
-## ★ iOS Application Life Cycle
+## 📣 iOS Application Life Cycle
 
 * UIKit apps are always in one of five states, which are shown in Figure 1. Apps start off not running. When the user explicitly launches the app, the app moves briefly to the inactive state before entering the active state. (An active app appears onscreen and is known as a foreground app.) Quitting an active app moves it offscreen and into the background state, where it stays until the system suspends it a short time later. At its discretion, the system may quietly terminate a suspended app, returning it to the not running state.
 
@@ -129,7 +129,7 @@ Lets you know that your app is moving out of the background and back into the fo
 * applicationWillTerminate:</br>
 Lets you know that your app is being terminated. This method is not called if your app is suspended.
 
-## ★ ViewController Life Cycle
+## 📣 ViewController Life Cycle
 
 <p align="center">
   <img src="https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/WWVC_vclife_2x.png" width="350" height="350" />
@@ -170,7 +170,7 @@ Called to notify the view controller that its view is about to layout its subvie
 * **viewDidDisappear**</br>
 **Called just after the view controller’s content view has been removed from the app’s view hierarchy.** Use this method to perform additional teardown activities. Despite the name, the system does not call this method just because the content view has become hidden or obscured. This method is only called when the content view has been removed from the app’s view hierarchy.
 
-## ★ UIKit
+## 📣 UIKit
 
 #### # UITableView
 
@@ -244,7 +244,7 @@ Called to notify the view controller that its view is about to layout its subvie
  func tableView(UITableView, didEndEditingRowAt: IndexPath?)
 ```
 
-## ★ CORE ML
+## 📣 CORE ML
 
 * Core ML is the foundation for domain-specific frameworks and functionality. Core ML supports Vision for image analysis, Natural Language for natural language processing, and GameplayKit for evaluating learned decision trees. Core ML itself builds on top of low-level primitives like Accelerate and BNNS, as well as Metal Performance Shaders.
 
@@ -270,7 +270,7 @@ Called to notify the view controller that its view is about to layout its subvie
 
 * GCD (Grand Central Dispatch) - 작업이 복잡하지 않고 간단하게 처리하거나 특정 유형의 시스템 이벤트를 비동기적으로 처리할 때 적합합니다. 예를 들면 타이머, 프로세스 등의 관련 이벤트입니다.
 
-## ★ CORE DATA
+## 📣 CORE DATA
 
 * Core Data is a framework that you use to manage the model layer objects in your application. It provides generalized and automated solutions to common tasks associated with object life cycle and object graph management, including persistence.
 
@@ -362,7 +362,9 @@ do { try managedContext.save() }
 catch let error as NSError { print("Could net save. \(error.debugDescription), \(error.localizedDescription)") }
 ```
 
-## ★ 클로저 (Closure)
+## 📣 [클로저 (Closure)](https://academy.realm.io/kr/posts/closure-and-higher-order-functions-of-swift/)
+
+* Closures are self-contained blocks of functionality that can be passed around and used in your code. Closures in Swift are similar to blocks in C and Objective-C and to lambdas in other programming languages.
 
 * 클로저란 코드의 블럭이자, 일급 객체로 완벽한 역할을 할 수 있습니다. 일급 객체란 전달 인자로 보낼 수 있고, 변수/상수 등으로 저장하거나 전달할 수 있으며, 함수의 반환 값이 될 수도 있습니다. 실제 우리가 알고 있는 함수는 클로저의 한 형태로, 이름이 있는 클로저입니다.
 
