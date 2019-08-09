@@ -374,6 +374,29 @@ catch let error as NSError { print("Could net save. \(error.debugDescription), \
 }
 ```
 
+#### 📄 Closure Example Source Code
+
+```swift
+/* 후행 클로저(Trailing Closure) 사용 */
+let reversed: [String] = names.sorted { (left: String,
+right: String) -> Bool in
+  return left > right
+}
+
+/* 클로저의 매개 변수 타입과 반환 타입을 생략 */
+let reversed: [String] = names.sorted { (left, right) in
+  return left > right
+}
+
+/* 단축 인자 이름 사용 */
+let reversed: [String] = names.sorted {
+  return $0 > $1
+} 
+
+/* 암시적 반환 표현 사용 */
+let reversed: [String] = names.sorted { $0 > $1 }   
+```
+
 ## ★ REFERENCE
 
 :airplane: [iOS REFERENCE URL](https://github.com/ChangYeop-Yang/Study-iOS/issues/5)
