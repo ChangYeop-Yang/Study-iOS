@@ -31,8 +31,6 @@ dispatch_async(queue, ^{
 }); 
 ```
 
-* * *
-
 #### ※ Automatic Reference Counting - Swift
 
 * In Swift, references to objects are strong, unless they are declared weak or unowned. Swift requires explicit handling of nil with the Optional type: a value type that can either have a value or be nil. An Optional type must be handled by "unwrapping" it with a conditional statement, allowing safe usage of the value, if present. Conversely, any non-Optional type will always have a value and cannot be nil. </br></br> Accordingly, a strong reference to an object cannot be of type Optional, as the object will be kept in the heap until the reference itself is deallocated. A weak reference is of type Optional, as the object can be deallocated and the reference be set to nil. Unowned references fall in-between; they are neither strong nor of type Optional. Instead, the compiler assumes that the object to which an unowned reference points is not deallocated as long the reference itself remains allocated. This is typically used in situations where the target object itself holds a reference to the object that holds the unowned reference. </br></br> Swift also differs from Objective-C in its usage and encouragement of value types instead of reference types. Most types in the Swift standard library are value types and they are copied by reference, whereas classes and closures are reference types and passed by reference. Because value types are copied when passed around, they are deallocated automatically with the reference that created them.
