@@ -1,1 +1,1 @@
-# ■ MacOS
+# ■ Study - MacOS
