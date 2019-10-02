@@ -4,6 +4,10 @@
 
 ## 🧐 MacOS Serial Number
 
+<p align="center">
+         <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macos/Mojave/macos-mojave-about-this-mac-overview-version-build.jpg" />
+</p>
+
 #### 📔 Read MacOS Serial Number Source Code
 
 ```Swift
