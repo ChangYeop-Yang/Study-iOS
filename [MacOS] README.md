@@ -100,3 +100,5 @@ func writePlistByCodable(fileName: String) {
         }
     }
 ```
+
+## 🧐 MacOS Process
