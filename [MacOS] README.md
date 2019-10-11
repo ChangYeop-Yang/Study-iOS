@@ -101,6 +101,25 @@ func writePlistByCodable(fileName: String) {
     }
 ```
 
-## 🧐 MacOS Process
+## 🧐 [MacOS Process](https://developer.apple.com/documentation/foundation/process)
 
 * An object representing a subprocess of the current process.
+
+* Using the Process class, your program can run another program as a subprocess and can monitor that program’s execution.
+
+#### 📔 Process Syntax
+
+```swift
+class Process : NSObject
+```
+
+#### 📔 Process Example Source Code
+
+```swift
+private func killProcess(pid: [Int32]) {
+    let task = Process()
+    task.launchPath = "/usr/bin/env"
+    task.arguments = ["kill"] + pid.compactMap { String($0) }
+    task.launch()
+}
+```
