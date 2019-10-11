@@ -102,3 +102,5 @@ func writePlistByCodable(fileName: String) {
 ```
 
 ## 🧐 MacOS Process
+
+* An object representing a subprocess of the current process.
