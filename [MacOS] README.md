@@ -103,9 +103,9 @@ func writePlistByCodable(fileName: String) {
 
 ## 🧐 [MacOS Process](https://developer.apple.com/documentation/foundation/process)
 
-* An object representing a subprocess of the current process.
+* An object representing a subprocess of the current process. Using the Process class, your program can run another program as a subprocess and can monitor that program’s execution.
 
-* Using the Process class, your program can run another program as a subprocess and can monitor that program’s execution.
+* 현재 프로세스에서 자식 프로세스를 만듬으로써 새로운 프로그램을 실행할 수 있습니다.
 
 #### 📔 Process Syntax
 
