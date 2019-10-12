@@ -403,6 +403,8 @@ let reversed: [String] = names.sorted {
 let reversed: [String] = names.sorted { $0 > $1 }   
 ```
 
+## Sign in with Apple
+
 ## 📣 REFERENCE
 
 :airplane: [iOS REFERENCE URL](https://github.com/ChangYeop-Yang/Study-iOS/issues/5)
