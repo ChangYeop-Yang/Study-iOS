@@ -403,7 +403,7 @@ let reversed: [String] = names.sorted {
 let reversed: [String] = names.sorted { $0 > $1 }   
 ```
 
-## Sign in with Apple
+## 📣 Sign in with Apple
 
 ## 📣 REFERENCE
 
